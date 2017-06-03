@@ -106,11 +106,11 @@ color: rgb(255, 255, 255) !important;
   <div class="row">
     <div class="five columns">
       <label id="lb1" for="whatInput">Was</label>
-      <input class="u-full-width" type="text" placeholder="(Jobtitel, Firmenname oder ID)" id="exampleEmailInput">
+      <input class="u-full-width" type="text" placeholder="(Jobtitel, Firmenname oder ID)" id="whatInput">
     </div>
     <div class="five columns">
       <label id="lb2" for="whereInput">Wo</label>
-      <input class="u-full-width" type="text" placeholder="(Ort oder 5-stellige PLZ)" id="exampleEmailInput">
+      <input class="u-full-width" type="text" placeholder="(Ort oder 5-stellige PLZ)" id="whereInput">
     </div>
     <div class="one column">
     <label for="exampleEmailInput"></label>
