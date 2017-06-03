@@ -31,6 +31,6 @@ public class Company {
 	private String Industry;
 	private int numberEmployees;
 
-	private Date logo;
+	private byte[] logo;
 
 }
