@@ -279,7 +279,7 @@ color: rgb(255, 255, 255) !important;
       <label id="lb2" for="exampleEmailInput">Wo</label>
       <input class="u-full-width" type="email" placeholder="(Ort oder 5-stellige PLZ)" id="exampleEmailInput">
     </div>
-    <div class="one column">
+    <div class="five columns">
     <label for="exampleEmailInput"></label>
   <a class=" sub1 button button-primary" href="#" id="sub1"><span class=" fa fa fa-eye"></span> Suchen</a>
   </div>
@@ -325,58 +325,7 @@ color: rgb(255, 255, 255) !important;
 </body>
 
 
-  <footer>
-      <!-- Pre-footer -->
-      <div class="prefooter">
-        <div class="container">
-          <div class="row">
-            <div class="one-third column">
-            <img src="https://www.tryfoexnow.com/c/foex-site/2015/images/foex_logo_light.png" class="img-responsive"  width="80%" height="80%">
-              <p class="ewf">We specialize in creating powerful <br>plugins that enhance Oracle APEX.</p>
-              <p class="ewf" >Our low-code Enterprise Rapid <br>Application Development solution <br>enables anyone with basic PL/SQL knowledge to built large-scale web applications declaratively.</p>
-            </div>
-
-            <div class="one-third column">
-              <h6 class="prefooter-header">Browse Products</h6>
-              <ul>
-                <li><a href="#">Database</a></li>
-                <li><a href="#" target="_blank">Graphic design</a></li>
-                <li><a href="#" target="_blank">Software Development</a></li>
-                <li><a href="#" target="_blank">Hardware Development</a></li>
-                  <li><a href="#" target="_blank">Hardware Development</a></li>
-                    <li><a href="#" target="_blank">Hardware Development</a></li>
-                      <li><a href="#" target="_blank">Hardware Development</a></li>
-              </ul>
-            </div>
-
-            <div class="one-third column">
-              <h6 class="prefooter-header">Help and Support</h6>
-              <ul>
-                <li><a href="#">Graphic design</a></li>
-                <li><a href="#" target="_blank">Obtaining my software</a></li>
-                <li><a href="#" target="_blank">Renewing my support service renewal</a></li>
-                <li><a href="#" target="_blank">Reviewing my support service renewal</a></li>
-                  <li><a href="#" target="_blank">Hardware Development</a></li>
-                    <li><a href="#" target="_blank">Hardware Development</a></li>
-                      <li><a href="#" target="_blank">Hardware Development</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-main">
-        <div class="container">
-          <div class="row">
-
-            <div class="two-thirds column">
-              <p>© Copyright 2017 Web-Development</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-
+  <%@ include file = "footer.jsp" %>
 
 
 

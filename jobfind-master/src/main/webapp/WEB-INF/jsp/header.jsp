@@ -90,7 +90,7 @@ color: rgb(255, 255, 255) !important;
   <nav class="navbar">
       <div class="container">
         <div class="two columns twoc">
-        <img src="https://www.tryfoexnow.com/c/foex-site/2015/images/foex-logo.png" class="u-max-full-width" >
+        <a href="/"><img src="https://www.tryfoexnow.com/c/foex-site/2015/images/foex-logo.png" class="u-max-full-width" ></a>
        </div>
         <ul class="navbar-list">
           <li class="navbar-item"><a class="navbar-link" href="/">Home</a></li>
@@ -116,16 +116,16 @@ color: rgb(255, 255, 255) !important;
             <div id="moreNavPopover" class="popover">
               <ul class="popover-list">
                 <li class="popover-item">
-                  <a class="popover-link" href="https://github.com/dhg/Skeleton">On Github</a>
+                  <a class="popover-link" href="#">On Github</a>
                 </li>
                 <li class="popover-item">
-                  <a class="popover-link" href="https://github.com/dhg/Skeleton#browser-support">Browsers</a>
+                  <a class="popover-link" href="#">Browsers</a>
                 </li>
                 <li class="popover-item">
-                  <a class="popover-link" href="https://github.com/dhg/Skeleton#extensions">Extensions</a>
+                  <a class="popover-link" href="#">Extensions</a>
                 </li>
                 <li class="popover-item">
-                  <a class="popover-link" href="https://github.com/dhg/Skeleton/releases">Versions</a>
+                  <a class="popover-link" href="#">Versions</a>
                 </li>
               </ul>
             </div>
