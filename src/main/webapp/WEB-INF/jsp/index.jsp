@@ -105,12 +105,12 @@ color: rgb(255, 255, 255) !important;
 <form>
   <div class="row">
     <div class="five columns">
-      <label id="lb1" for="exampleEmailInput">Was</label>
-      <input class="u-full-width" type="email" placeholder="(Jobtitel, Firmenname oder ID)" id="exampleEmailInput">
+      <label id="lb1" for="whatInput">Was</label>
+      <input class="u-full-width" type="text" placeholder="(Jobtitel, Firmenname oder ID)" id="exampleEmailInput">
     </div>
     <div class="five columns">
-      <label id="lb2" for="exampleEmailInput">Wo</label>
-      <input class="u-full-width" type="email" placeholder="(Ort oder 5-stellige PLZ)" id="exampleEmailInput">
+      <label id="lb2" for="whereInput">Wo</label>
+      <input class="u-full-width" type="text" placeholder="(Ort oder 5-stellige PLZ)" id="exampleEmailInput">
     </div>
     <div class="one column">
     <label for="exampleEmailInput"></label>
