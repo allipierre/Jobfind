@@ -296,7 +296,7 @@ color: rgb(255, 255, 255) !important;
 			<div class="panel panel-light-content hidden-xs hidden-sm " data-automation="jobseeker-jobs">
         <div class="panel-heading">
             <small class="text-muted"> ${task.name}</small>
-            <p class="headline3"><strong><a href="/en/employer/groupe-agri-revolution/recherche-dun-technicien-agricole.html">${task.numberEmployees} </a></strong> <small>(Full time)</small></p>
+            <p class="headline3"><strong><a href="/en/employer/groupe-agri-revolution/recherche-dun-technicien-agricole.html">${task.number_employees} </a></strong> <small>(Full time)</small></p>
         </div>
         <div class="panel-footer clearfix">
             <ul class="list-inline">
@@ -307,10 +307,10 @@ color: rgb(255, 255, 255) !important;
                 </li>
 
                                                     <li class="panel-footer-icon-wrapper">
-                        <i class="icon icon-location"></i>${task.Location}         </li>
+                        <i class="icon icon-location"></i>${task.location}         </li>
                 
                 <li class="panel-footer-icon-wrapper">
-                    <i class="icon icon-bookmark"></i>${task.Industry}  </li>
+                    <i class="icon icon-bookmark"></i>${task.industry}  </li>
                 <li class="pull-right">
                     <a href="/en/employer/groupe-agri-revolution/recherche-dun-technicien-agricole.html" class="btn btn-info pull-right icon-eye" ><span class=" fa fa fa-eye"></span> View Job</a>
                 </li>
