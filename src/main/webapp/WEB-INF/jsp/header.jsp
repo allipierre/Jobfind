@@ -112,14 +112,14 @@ color: rgb(255, 255, 255) !important;
           </li>
           <li class="navbar-item"><a class="navbar-link" href="#examples">Examples</a></li>
           <li class="navbar-item">
-            <a class="navbar-link" href="#" data-popover="#moreNavPopover">More</a>
+            <a class="navbar-link" href="#" data-popover="#moreNavPopover">For Employees</a>
             <div id="moreNavPopover" class="popover">
               <ul class="popover-list">
                 <li class="popover-item">
-                  <a class="popover-link" href="#">On Github</a>
+                  <a class="popover-link" href="#">Create profile</a>
                 </li>
                 <li class="popover-item">
-                  <a class="popover-link" href="#">Browsers</a>
+                  <a class="popover-link" href="#">Post a Job</a>
                 </li>
                 <li class="popover-item">
                   <a class="popover-link" href="#">Extensions</a>
