@@ -89,6 +89,32 @@ aa {
 	border-color: red !important;
 }
 
+.navbar-link .iconen {
+	display: none;
+}
+
+
+@media (max-width: 750px){
+	.navbar-list li:not(.iconen) {display: none;}
+	.navbar-list .iconen {
+		float: right !important;
+		display: block !important;
+	}
+}
+
+@media screen and (max-width: 750) {
+  .navbar-link.responsive {position: relative;}
+  .navbar-link.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar-link.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
 
 
 </style>
