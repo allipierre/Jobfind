@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="/static/css/normalize.css">
   <link rel="stylesheet" href="/static/css/skeleton.css">
   <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="/static/css/style1.css">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
    <script type="json/javascript"  src="/static/js/file.js"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -197,7 +198,7 @@ if(mq.matches) {
 		Typed.new(".price", {
 			strings: ["GOOD JOBS", "<strong>FREE JOBS</strong>"],
 			typeSpeed: 1,
-			loop: false
+			loop: true
 		});
 	});
 } else {
@@ -205,7 +206,7 @@ if(mq.matches) {
 		Typed.new(".price", {
 			strings: ["GOOD JOBS", "<strong>FREE JOBS</strong>"],
 			typeSpeed: 1,
-			loop: true
+			loop: false
 		});
 	});
 }
