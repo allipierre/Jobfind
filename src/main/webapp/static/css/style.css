@@ -379,7 +379,7 @@ job-search-content .panel-footer li:last-child {
 }
 
 /* Hide the link that should open and close the topnav on small screens */
-.navbar-link.icon {
+.navbar-link.icone {
 	display: none;
 }
 
