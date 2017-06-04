@@ -21,12 +21,14 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
+@SuppressWarnings("unused")
 public class Countries {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	private String name;
 	
+	@SuppressWarnings("rawtypes")
 	@OneToMany( targetEntity=Company.class )
     private List companyList;
 

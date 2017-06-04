@@ -289,10 +289,26 @@ color: rgb(255, 255, 255) !important;
   <div class="row">
     <div class="six columns">
       <label for="countryInput">Company Size</label>
-      <input class="u-full-width" type="text" placeholder="Country Name" id="countryInput" name="value" value="${CompanySize.value}">
+      <input class="u-full-width" type="text" placeholder="Country Size" id="countryInput" name="value" value="${CompanySize.value}">
     </div>
   </div>
-   <input class="button-primary" type="submit" value="SAVE Country"> 
+   <input class="button-primary" type="submit" value="SAVE Country Size"> 
+</form> 
+</div>
+
+
+
+
+<div class="container">
+
+<form method="POST" action="save-industry">
+  <div class="row">
+    <div class="six columns">
+      <label for="countryInput">Industry</label>
+      <input class="u-full-width" type="text" placeholder="Industry" id="industryInput" name="name" value="${Industry.name}">
+    </div>
+  </div>
+   <input class="button-primary" type="submit" value="SAVE Industry"> 
 </form> 
 </div>
 

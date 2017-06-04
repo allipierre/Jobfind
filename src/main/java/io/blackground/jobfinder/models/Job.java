@@ -21,13 +21,15 @@ import java.util.Date;
 @Getter
 @Setter
 @Entity
+@SuppressWarnings("unused")
 public class Job {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    private String position;
+  
+	private String position;
 
     @ManyToOne
     private Company company;

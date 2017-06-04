@@ -22,13 +22,13 @@ import javax.persistence.OneToMany;
 @Setter
 @Entity
 @SuppressWarnings("unused")
-public class CompanySize {
+public class Industry {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
-	private String value;
+	private String name;
 	
 	@SuppressWarnings("rawtypes")
 	@OneToMany( targetEntity=Company.class )

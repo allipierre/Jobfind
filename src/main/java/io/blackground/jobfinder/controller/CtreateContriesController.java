@@ -7,14 +7,15 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import io.blackground.jobfinder.models.CompanySize;
 import io.blackground.jobfinder.models.Countries;
+import io.blackground.jobfinder.models.Industry;
 import io.blackground.jobfinder.services.CompanySizeService;
 import io.blackground.jobfinder.services.CountriesService;
+import io.blackground.jobfinder.services.IndustryService;
 
 /**
  * @author yotti
@@ -28,12 +29,14 @@ public class CtreateContriesController {
 	
 	@Autowired
 	private CompanySizeService companySizeService;
+	
+	@Autowired
+	private IndustryService industryService;
 
 	@PostMapping("/save-countries")
 	public String newCountry(@ModelAttribute Countries country, HttpServletRequest request) {
 		// task.setDateCreated(new Date());
 		countriesService.save(country);
-		request.setAttribute("country", countriesService.findAll());
 		// request.setAttribute("mode", "MODE_TASKS");
 		return "createcountries";
 	}
@@ -41,7 +44,13 @@ public class CtreateContriesController {
 	@PostMapping("/save-size")
 	public String newCompSize(@ModelAttribute CompanySize compSize, HttpServletRequest request) {
 		companySizeService.save(compSize);
-		request.setAttribute("compsize", companySizeService.findAll());
+		return "createcountries";
+	}
+	
+	
+	@PostMapping("/save-industry")
+	public String newIndustry(@ModelAttribute Industry industry, HttpServletRequest request) {
+		industryService.save(industry);
 		return "createcountries";
 	}
 

@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import io.blackground.jobfinder.services.CompanyService;
 import io.blackground.jobfinder.services.CompanySizeService;
 import io.blackground.jobfinder.services.CountriesService;
+import io.blackground.jobfinder.services.IndustryService;
 import io.blackground.jobfinder.services.JobService;
 
 
@@ -25,6 +26,7 @@ import io.blackground.jobfinder.services.JobService;
 @Controller
 public class MainController {
 	
+	@SuppressWarnings("unused")
 	@Autowired
 	private JobService jobservice;
 	
@@ -36,6 +38,9 @@ public class MainController {
 	
 	@Autowired
 	private CompanySizeService companySizesservice;
+	
+	@Autowired
+	private IndustryService industryService;
 
 	@GetMapping("/")
 	public String hello() {
@@ -52,6 +57,7 @@ public class MainController {
 	public String createCompany(HttpServletRequest request) {
 		request.setAttribute("countries", countriesservice.findAll());
 		request.setAttribute("companySize", companySizesservice.findAll());
+		request.setAttribute("industry", industryService.findAll());
 		return "createcompagny";
 	}
 	

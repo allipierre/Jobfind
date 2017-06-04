@@ -313,9 +313,9 @@ color: rgb(255, 255, 255) !important;
       <label for="countryInput">Industry</label>
       <select class="u-full-width" id="countryInput">
       <option value="" disabled="disabled" selected="selected">Select the Company Industry</option>
-        <option value="Accounting and Auditing Services">Accounting and Auditing Services</option>
-        <option value="Advertising and Public Relations">Advertising and Public Relations</option>
-        <option value="Agriculture / Forestry / Fishing">Agriculture / Forestry / Fishing</option>
+        <c:forEach var="industry" items="${industry}">
+        <option value="${industry.id}">${industry.name}</option>
+         </c:forEach>
       </select>
     </div>
   </div>

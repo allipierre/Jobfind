@@ -8,13 +8,11 @@ import java.util.ArrayList;
 
 import javax.transaction.Transactional;
 
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import io.blackground.jobfinder.Repository.CompanySizeRepository;
-import io.blackground.jobfinder.Repository.JobRepository;
 import io.blackground.jobfinder.models.CompanySize;
-import io.blackground.jobfinder.models.Job;
+
 
 /**
  * @author yotti

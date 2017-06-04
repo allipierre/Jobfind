@@ -18,6 +18,7 @@ import javax.persistence.Id;
 @Getter
 @Setter
 @Entity
+@SuppressWarnings("unused")
 public class Company {
 
 	@Id

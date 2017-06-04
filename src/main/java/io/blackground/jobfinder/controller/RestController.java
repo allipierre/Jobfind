@@ -4,7 +4,7 @@
 package io.blackground.jobfinder.controller;
 
 
-import org.springframework.web.bind.annotation.GetMapping;
+
 
 
 /**
