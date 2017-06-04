@@ -24,6 +24,16 @@
     box-sizing: border-box;
     display: none !important;
 }
+
+.navbar{
+	background: rgb(255, 255, 255);
+}
+.navbar-list{
+	list-style: none !important;
+}
+.navbar-link{
+	    text-decoration: none !important;
+}
 	
 
 }
@@ -50,3 +60,4 @@ input[type=checkbox]{
 input[type=checkbox]:checked ~ #pana{
     display: block;
 }
+
