@@ -8,3 +8,30 @@
 	
 
 }
+
+@media screen and (min-width : 900px) and (max-width : 1100px){
+	utx {
+    padding-right: 55px !important;
+}
+}
+
+@media screen and (min-width : 700px) and (max-width : 899px){
+	utx {
+    padding-right: 55px !important;
+}
+}
+
+@media screen and (min-width : 550px) and (max-width : 699px){
+	utx {
+    padding-right: 90px !important;
+}
+}
+
+@media screen and (max-width : 549px){
+
+.#sub1 {
+    width: 100% !important;
+}
+	
+
+}

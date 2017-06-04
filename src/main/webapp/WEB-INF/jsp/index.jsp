@@ -191,16 +191,25 @@ color: rgb(255, 255, 255) !important;
 
 
 <script>
-$(function(){
-$("#header").load("header.html");
-});
-document.addEventListener("DOMContentLoaded", function(){
-	Typed.new(".price", {
-		strings: ["GOOD JOBS", "<strong>FREE JOBS</strong>"],
-		typeSpeed: 1,
-		loop: true
+var mq = window.matchMedia('@media all and (max-width: 850px)');
+if(mq.matches) {
+	document.addEventListener("DOMContentLoaded", function(){
+		Typed.new(".price", {
+			strings: ["GOOD JOBS", "<strong>FREE JOBS</strong>"],
+			typeSpeed: 1,
+			loop: false
+		});
 	});
-});
+} else {
+	document.addEventListener("DOMContentLoaded", function(){
+		Typed.new(".price", {
+			strings: ["GOOD JOBS", "<strong>FREE JOBS</strong>"],
+			typeSpeed: 1,
+			loop: true
+		});
+	});
+}
+
 
 </script>
  <script type="text/javascript"  src="/static/js/file.js"></script>

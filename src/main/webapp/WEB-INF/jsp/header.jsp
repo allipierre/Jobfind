@@ -154,19 +154,7 @@ aa {
 
 
 
-<script>
-$(function(){
-$("#header").load("header.html");
-});
-document.addEventListener("DOMContentLoaded", function(){
-	Typed.new(".price", {
-		strings: ["GHC 500", "<strong>GHC 299</strong>"],
-		typeSpeed: 1,
-		loop: true
-	});
-});
 
-</script>
 <script type="text/javascript" src="/static/js/file.js"></script>
 <script type="text/javascript" src="/static/js/typed.js"></script>
 </html>
