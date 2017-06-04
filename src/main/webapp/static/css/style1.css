@@ -35,3 +35,12 @@
 	
 
 }
+
+.panel {
+    /* border-color: rgb(224, 225, 229) !important; */
+    padding-top: 9px;
+    border-top: 2px solid rgb(49, 163, 221) !important;
+    border-bottom: 2px solid rgb(49, 163, 221) !important;
+    border-left: 2px solid rgb(49, 163, 221) !important;
+    border-right: 2px solid rgb(49, 163, 221) !important;
+}

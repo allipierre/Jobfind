@@ -40,6 +40,11 @@ public class MainController {
 		return "allejob";
 	}
 	
+	@GetMapping("/createcompagny")
+	public String createCompany() {
+		return "createcompagny";
+	}
+	
 	
 	
 
