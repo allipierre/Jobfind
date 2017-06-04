@@ -276,8 +276,8 @@ color: rgb(255, 255, 255) !important;
       <label for="countryInput">Country Name</label>
       <input class="u-full-width" type="text" placeholder="Country Name" id="countryInput" value="${Countries.name}">
     </div>
-    <input class="button-primary" type="submit" value="SAVE">
   </div>
+   <input class="button-primary" type="submit" value="SAVE">
   
 </form> 
 </div>
