@@ -94,7 +94,7 @@ color: rgb(255, 255, 255) !important;
 <%@ include file = "header.jsp" %>
     <div class="container ner">
         <section class="header">
-          <h3>Get a <strong>website</strong> created <strong>for</strong> your business for as low as <span class="price"><strong>GHC 299</strong></span><span class="typed-cursor">|</span> per year.</h3>
+          <h3>Get a <strong>website</strong> created <strong>for</strong> your business for as low as <span class="price"><strong>GHC 299</strong></span><span class="typed-cursor"></span> per year.</h3>
           <a class="button button-primary">Get yours now</a>
           <a class="button">Know more</a>
 
