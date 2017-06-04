@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <html lang="en">
 <head>
 
@@ -281,7 +282,7 @@ color: rgb(255, 255, 255) !important;
       <select class="u-full-width" id="countryInput">
       <option value="" disabled="disabled" selected="selected">Select the Country</option>
       <c:forEach var="country" items="${countries}" >
-        <option value="${country.id}">${country.name}</option>
+        <option id="countryID" value="${country.id}">${country.name}</option>
         </c:forEach>
       </select>
     </div>
@@ -317,12 +318,14 @@ color: rgb(255, 255, 255) !important;
         <option value="${industry.id}">${industry.name}</option>
          </c:forEach>
       </select>
+      <form:select value="${industry.id}" items="${countryList}" />
     </div>
   </div>
   <label for="aboutus">About Us</label>
   <textarea class="u-full-width" placeholder="About Us" id="aboutus"  value="${company.aboutUs}"></textarea>
   <input class="button-primary" type="submit" value="SAVE">
 </form>
+
 
 
  
