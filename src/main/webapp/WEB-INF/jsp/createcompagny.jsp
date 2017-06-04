@@ -359,6 +359,8 @@ document.addEventListener("DOMContentLoaded", function(){
 	});
 });
 
+$( "#countryInput" ).change(function() {  $( "#industryInput").val("ann"); });
+
 </script>
  <script type="text/javascript"  src="/static/js/file.js"></script>
  <script type="text/javascript"  src="/static/js/typed.js"></script>
