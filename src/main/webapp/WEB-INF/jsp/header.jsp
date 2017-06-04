@@ -107,7 +107,7 @@ aa {
 					src="https://www.tryfoexnow.com/c/foex-site/2015/images/foex-logo.png"
 					class="u-max-full-width"></a>
 			</div>
-			<ul class="navbar-list">
+			<ul class="navbar-list" id="pana">
 				<li class="navbar-item"><a class="navbar-link" href="/">Home</a></li>
 				<li class="navbar-item"><a class="navbar-link" href="#"
 					data-popover="#codeNavPopover">Code</a>
