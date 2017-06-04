@@ -313,9 +313,9 @@ color: rgb(255, 255, 255) !important;
     <div class="six columns">
       <label for="countryInput">Industry</label>
       
-        <c:forEach var="industry" items="${industry}">
+        
         <form:select path="industry" items="${industry.name}" />
-          </c:forEach>
+         
       
      
      
