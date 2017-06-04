@@ -21,7 +21,7 @@ import java.util.Date;
 @Getter
 @Setter
 @Entity
-@SuppressWarnings("unused")
+
 public class Job {
 
 	@Id

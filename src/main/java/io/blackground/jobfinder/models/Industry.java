@@ -21,7 +21,7 @@ import javax.persistence.OneToMany;
 @Getter
 @Setter
 @Entity
-@SuppressWarnings("unused")
+
 public class Industry {
 
 	@Id
@@ -30,7 +30,7 @@ public class Industry {
 
 	private String name;
 	
-	@SuppressWarnings("rawtypes")
+	
 	@OneToMany( targetEntity=Company.class )
     private List companyList;
 	
