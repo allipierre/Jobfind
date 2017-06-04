@@ -160,7 +160,7 @@ aa {
 							</li>
 						</ul>
 					</div></li>
-				<li class="navbar-item"><a class="navbar-link iconen"
+				<li class="navbar-item iconen"><a class="navbar-link"
 					href="javascript:void(0);" onclick="myFunction()">&#9776;</a></li>
 			</ul>
 		</div>
