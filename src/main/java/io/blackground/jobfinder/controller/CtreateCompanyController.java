@@ -25,11 +25,11 @@ public class CtreateCompanyController {
 	private CompanyService companyservice;
 
 	@PostMapping("/save-company")
-	public String saveTask(@ModelAttribute Company company, HttpServletRequest request) {
-		// task.setDateCreated(new Date());
+	public String saveTask(@ModelAttribute Company company, BindingResult bindingResult, HttpServletRequest request) {
+
 		companyservice.save(company);
-		//request.setAttribute("tasks", companyservice.findAll());
-		//request.setAttribute("mode", "MODE_TASKS");
+		// request.setAttribute("tasks", companyservice.findAll());
+		// request.setAttribute("mode", "MODE_TASKS");
 		return "createcompagny";
 	}
 
