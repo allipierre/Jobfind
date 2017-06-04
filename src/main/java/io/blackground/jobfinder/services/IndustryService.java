@@ -27,9 +27,9 @@ public class IndustryService {
 	/**
 	 * @param taskRepository
 	 */
-	public IndustryService(IndustryRepository countriesRepository) {
+	public IndustryService(IndustryRepository industryRepository) {
 		super();
-		this.industryRepository = countriesRepository;
+		this.industryRepository = industryRepository;
 	}
 
 	public List<Industry> findAll() {

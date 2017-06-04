@@ -21,7 +21,6 @@ import javax.persistence.OneToMany;
 @Getter
 @Setter
 @Entity
-
 public class CompanySize {
 
 	@Id
