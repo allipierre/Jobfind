@@ -4,12 +4,15 @@
 package io.blackground.jobfinder.controller;
 
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import io.blackground.jobfinder.models.Industry;
 import io.blackground.jobfinder.services.CompanyService;
 import io.blackground.jobfinder.services.CompanySizeService;
 import io.blackground.jobfinder.services.CountriesService;
@@ -55,9 +58,10 @@ public class MainController {
 	
 	@GetMapping("/createcompagny")
 	public String createCompany(HttpServletRequest request) {
+		List<Industry> list=industryService.findAll();
 		request.setAttribute("countries", countriesservice.findAll());
 		request.setAttribute("companySize", companySizesservice.findAll());
-		request.setAttribute("industry", industryService.findAll());
+		request.setAttribute("industry", list);
 		return "createcompagny";
 	}
 	
