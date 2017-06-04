@@ -312,13 +312,13 @@ color: rgb(255, 255, 255) !important;
     </div>
     <div class="six columns">
       <label for="countryInput">Industry</label>
-      <select class="u-full-width" id="countryInput">
-      <option value="" disabled="disabled" selected="selected">Select the Company Industry</option>
+      
         <c:forEach var="industry" items="${industry}">
-        <option value="${industry.id}">${industry.name}</option>
-         </c:forEach>
-      </select>
-      <form:select path="${industry.id}" items="${countryList}" />
+        <form:select path="industry" items="${industry.name}" />
+          </c:forEach>
+      
+     
+     
     </div>
   </div>
   <label for="aboutus">About Us</label>
