@@ -25,7 +25,7 @@ public class CtreateContriesController {
 	private CountriesService countriesService;
 
 	@PostMapping("/save-countries")
-	public String newCountry(@ModelAttribute Countries country, BindingResult bindingResult, HttpServletRequest request) {
+	public String newCountry(@ModelAttribute Countries country, HttpServletRequest request) {
 		// task.setDateCreated(new Date());
 		countriesService.save(country);
 		request.setAttribute("country", countriesService.findAll());
