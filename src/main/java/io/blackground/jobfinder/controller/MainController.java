@@ -41,7 +41,8 @@ public class MainController {
 	}
 	
 	@GetMapping("/createcompagny")
-	public String createCompany() {
+	public String createCompany(HttpServletRequest request) {
+		request.setAttribute("countries", companyservice.findAll());
 		return "createcompagny";
 	}
 	

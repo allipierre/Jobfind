@@ -270,62 +270,16 @@ color: rgb(255, 255, 255) !important;
      
 <div class="container">
 
-<form method="POST" action="save-company">
+<form method="POST" action="save-countries">
   <div class="row">
     <div class="six columns">
-      <label for="compnaneInput">Company Name</label>
-      <input class="u-full-width" type="text" placeholder="Company Name" id="compnaneInput" value="${company.name}">
+      <label for="countryInput">Country Name</label>
+      <input class="u-full-width" type="text" placeholder="Country Name" id="countryInput" value="${Countries.name}">
     </div>
-    <div class="six columns">
-      <label for="countryInput">Country</label>
-      <select class="u-full-width" id="countryInput">
-      <option value="" disabled="disabled" selected="selected">Select the Country</option>
-      <c:forEach var="country" items="${countries}">
-        <option value="${country.id}">${country.name}</option>
-        </c:forEach>
-      </select>
-    </div>
+    <input class="button-primary" type="submit" value="SAVE">
   </div>
   
-  <div class="row">
-    <div class="six columns">
-      <label for="citynameInput">City Name</label>
-      <input class="u-full-width" type="text" placeholder="City Name" id="citynameInput" value="${company.city}">
-    </div>
-    <div class="six columns">
-      <label for="sizeInput">Size</label>
-      <select class="u-full-width" id="sizeInput">
-      <option value="" disabled="disabled" selected="selected">Select the Company Size (No. of employees)</option>
-        <c:forEach var="companySize" items="${companySize}">
-        <option value="${companySize.id}">${companySize.value}</option>
-         </c:forEach>
-      </select>
-    </div>
-  </div>
-  
-  
-  <div class="row">
-    <div class="six columns">
-      <label for="websiteInput">Website</label>
-      <input class="u-full-width" type="text" placeholder="Website" id="websiteInput" value="${company.website}">
-    </div>
-    <div class="six columns">
-      <label for="countryInput">Industry</label>
-      <select class="u-full-width" id="countryInput">
-      <option value="" disabled="disabled" selected="selected">Select the Company Industry</option>
-        <option value="Accounting and Auditing Services">Accounting and Auditing Services</option>
-        <option value="Advertising and Public Relations">Advertising and Public Relations</option>
-        <option value="Agriculture / Forestry / Fishing">Agriculture / Forestry / Fishing</option>
-      </select>
-    </div>
-  </div>
-  <label for="aboutus">About Us</label>
-  <textarea class="u-full-width" placeholder="About Us" id="aboutus"  value="${company.aboutUs}"></textarea>
-  <input class="button-primary" type="submit" value="SAVE">
-</form>
-
-
- 
+</form> 
 </div>
 
 
