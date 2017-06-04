@@ -89,7 +89,7 @@ color: rgb(255, 255, 255) !important;
 .navbar-list li:not(:first-child) {display: none;}
   .navbar-list a.icon {
     float: right;
-    display: block;
+    display:block !important;
   }
   }
 </style>
