@@ -90,7 +90,19 @@ aa {
 	border-color: red !important;
 }
 
-
+@media (max-width: 750px) {
+  .navbar-link.responsive {position: relative !important;}
+  .navbar-link.responsive .iconen {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar-link.responsive li {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
 
 
 </style>
