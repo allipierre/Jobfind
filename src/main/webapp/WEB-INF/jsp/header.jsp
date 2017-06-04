@@ -89,6 +89,21 @@ aa {
 	border-color: red !important;
 }
 
+/* Hide the link that should open and close the topnav on small screens */
+.navbar-link.iconen {
+	display: none;
+}
+
+@media (max-width: 750px){
+	.navbar-list li:not (:first-child ) {
+		display: none !important;
+	}
+	.navbar-list.iconen {
+		float: right !important;
+		display: block !important;
+	}
+}
+
 
 </style>
 
@@ -133,7 +148,7 @@ aa {
 							</li>
 						</ul>
 					</div></li>
-				<li class="navbar-item"><a class="navbar-link icone"
+				<li class="navbar-item"><a class="navbar-link iconen"
 					href="javascript:void(0);" onclick="myFunction()">&#9776;</a></li>
 			</ul>
 		</div>
