@@ -46,6 +46,12 @@ public class MainController {
 		return "createcompagny";
 	}
 	
+	@GetMapping("/createcountries")
+	public String createCountry(HttpServletRequest request) {
+		return "createcountries";
+	}
+	
+	
 	
 	
 
