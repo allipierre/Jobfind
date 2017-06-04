@@ -48,6 +48,7 @@ public class MainController {
 	
 	@GetMapping("/createcountries")
 	public String createCountry(HttpServletRequest request) {
+		request.setAttribute("countries", companyservice.findAll());
 		return "createcountries";
 	}
 	

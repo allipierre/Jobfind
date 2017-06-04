@@ -25,10 +25,10 @@ public class CtreateContriesController {
 	private CountriesService countriesService;
 
 	@PostMapping("/save-countries")
-	public String saveTask(@ModelAttribute Countries country, BindingResult bindingResult, HttpServletRequest request) {
+	public String newCountry(@ModelAttribute Countries country, BindingResult bindingResult, HttpServletRequest request) {
 		// task.setDateCreated(new Date());
 		countriesService.save(country);
-		//request.setAttribute("tasks", companyservice.findAll());
+		request.setAttribute("country", countriesService.findAll());
 		//request.setAttribute("mode", "MODE_TASKS");
 		return "createcountries";
 	}
