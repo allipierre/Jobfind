@@ -107,10 +107,10 @@ aa {
 					src="https://www.tryfoexnow.com/c/foex-site/2015/images/foex-logo.png"
 					class="u-max-full-width"></a>
 			</div>
-			<div class="container">
+			
 			<label for="show-menu" class="show-menu">Show Menu</label>
             <input type="checkbox" id="show-menu" role="button">
-            </div>
+            
 			<ul class="navbar-list" id="pana">
 				<li class="navbar-item"><a class="navbar-link" href="/">Home</a></li>
 				<li class="navbar-item"><a class="navbar-link" href="#"
