@@ -56,7 +56,7 @@ aa{
 }
 .utx{
 background: rgb(49, 163, 221) !important;
-    padding-left: 20px !important;
+    padding-left: 20px;
     padding-top: 10px !important;
     padding-right: 25px;
 }
