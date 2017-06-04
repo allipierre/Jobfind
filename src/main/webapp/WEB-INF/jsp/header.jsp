@@ -80,6 +80,11 @@ color: rgb(255, 255, 255) !important;
     background-color: red !important;
     border-color: red !important;
 }
+
+/* Hide the link that should open and close the topnav on small screens */
+.navbar-link.icon {
+    display: none;
+}
 </style>
 
  
@@ -130,7 +135,7 @@ color: rgb(255, 255, 255) !important;
               </ul>
             </div>
           </li>
-          <li class="navbar-item"><a class="navbar-link" href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a></li>
+          <li class="navbar-item"><a class="navbar-link icon" href="javascript:void(0);"  onclick="myFunction()">&#9776;</a></li>
         </ul>
       </div>
     </nav>
