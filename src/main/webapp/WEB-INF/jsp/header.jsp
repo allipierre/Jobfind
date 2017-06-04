@@ -2,159 +2,165 @@
 <html lang="en">
 <head>
 
-  <meta charset="utf-8">
-  <title>Home</title>
-  <meta name="description" content="Website to help People">
-  <meta name="author" content="Alli Pierre Yotti">
+<meta charset="utf-8">
+<title>Home</title>
+<meta name="description" content="Website to help People">
+<meta name="author" content="Alli Pierre Yotti">
 
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600"
+	rel="stylesheet" type="text/css">
 
 
-  <link rel="stylesheet" href="/static/css/normalize.css">
-  <link rel="stylesheet" href="/static/css/skeleton.css">
-  <link rel="stylesheet" href="/static/css/style.css">
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
-   <script type="json/javascript"  src="/static/js/file.js"></script>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-   <script src="/static/js/site.js"></script>
+<link rel="stylesheet" href="/static/css/normalize.css">
+<link rel="stylesheet" href="/static/css/skeleton.css">
+<link rel="stylesheet" href="/static/css/style.css">
+<link
+	href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+	rel="stylesheet">
+<script type="json/javascript" src="/static/js/file.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="/static/js/site.js"></script>
 
 
 <style>
-html{
-  background: rgba(182, 184, 187, 0.22) !important;
-}
-
-.header{
-  margin-top: 14rem !important;
-}
-aa{
-
-}
-
-.ner{
-  max-width: 800px !important;
-  padding-top: 50px !important;
+html {
+	background: rgba(182, 184, 187, 0.22) !important;
 }
 
 .header {
-
-    text-align: center;
-    margin-bottom: 4em;
+	margin-top: 14rem !important;
 }
 
-
-.navbar-list{
-  float: right !important;
-}
-.utx{
-background: rgb(49, 163, 221) !important;
-    padding-left: 20px !important;
-    padding-top: 10px !important;
-    padding-right: 25px !important;
-}
-.one.column{
-padding-top: 23px;
+aa {
+	
 }
 
-@media (max-width: 750px){
-
-.two.columns {
-    padding-top: 14px !important;
-}
-}
-.button.button-primary, button.button-primary, input[type="submit"].button-primary, input[type="reset"].button-primary, input[type="button"].button-primary {
-    color: rgb(255, 255, 255);
-    background-color: rgb(49, 163, 221) !important;
-    border-color: rgb(49, 163, 221) !important;
-}
-#lb1,#lb2{
-color: rgb(255, 255, 255) !important;
+.ner {
+	max-width: 800px !important;
+	padding-top: 50px !important;
 }
 
-#sub1{
-    color: rgb(255, 255, 255) !important;
-    background-color: red !important;
-    border-color: red !important;
+.header {
+	text-align: center;
+	margin-bottom: 4em;
+}
+
+.navbar-list {
+	float: right !important;
+}
+
+.utx {
+	background: rgb(49, 163, 221) !important;
+	padding-left: 20px !important;
+	padding-top: 10px !important;
+	padding-right: 25px !important;
+}
+
+.one.column {
+	padding-top: 23px;
+}
+
+@media ( max-width : 750px) {
+	.two.columns {
+		padding-top: 14px !important;
+	}
+}
+
+.button.button-primary, button.button-primary, input[type="submit"].button-primary,
+	input[type="reset"].button-primary, input[type="button"].button-primary
+	{
+	color: rgb(255, 255, 255);
+	background-color: rgb(49, 163, 221) !important;
+	border-color: rgb(49, 163, 221) !important;
+}
+
+#lb1, #lb2 {
+	color: rgb(255, 255, 255) !important;
+}
+
+#sub1 {
+	color: rgb(255, 255, 255) !important;
+	background-color: red !important;
+	border-color: red !important;
 }
 
 /* Hide the link that should open and close the topnav on small screens */
 .navbar-link.icon {
-    display: none;
+	display: none;
 }
+
 @media screen and (max-width: 750px) {
-.navbar-list li:not(:first-child) {display: none;}
-  .navbar-list.icon {
-    display:block !important;
-  }
-  }
+	.navbar-list li:not (:first-child ) {
+		display: none;
+	}
+	.navbar-list.icone {
+		float: right;
+		display: block !important;
+	}
+}
 </style>
 
- 
-  <link rel="icon" type="image/png" href="images/favicon.png">
+
+<link rel="icon" type="image/png" href="images/favicon.png">
 
 </head>
 <body>
-  <nav class="navbar">
-      <div class="container">
-        <div class="two columns twoc">
-        <a href="/"><img src="https://www.tryfoexnow.com/c/foex-site/2015/images/foex-logo.png" class="u-max-full-width" ></a>
-       </div>
-        <ul class="navbar-list">
-          <li class="navbar-item"><a class="navbar-link" href="/">Home</a></li>
-          <li class="navbar-item">
-            <a class="navbar-link" href="#" data-popover="#codeNavPopover">Code</a>
-            <div id="codeNavPopover" class="popover">
-              <ul class="popover-list">
-                <li class="popover-item">
-                  <a class="popover-link" href="list">Dynamic List</a>
-                </li>
-                <li class="popover-item">
-                  <a class="popover-link" href="datatable">Datatable</a>
-                </li>
-                <li class="popover-item">
-                  <a class="popover-link" href="chart">Charts</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="navbar-item"><a class="navbar-link" href="#examples">Examples</a></li>
-          <li class="navbar-item">
-            <a class="navbar-link" href="#" data-popover="#moreNavPopover">Employees</a>
-            <div id="moreNavPopover" class="popover">
-              <ul class="popover-list">
-                <li class="popover-item">
-                  <a class="popover-link" href="#">Create profile</a>
-                </li>
-                <li class="popover-item">
-                  <a class="popover-link" href="#">Post a Job</a>
-                </li>
-                <li class="popover-item">
-                  <a class="popover-link" href="#">Extensions</a>
-                </li>
-                <li class="popover-item">
-                  <a class="popover-link" href="#">Versions</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="navbar-item"><a class="navbar-link icon" href="javascript:void(0);"  onclick="myFunction()">&#9776;</a></li>
-        </ul>
-      </div>
-    </nav>
+	<nav class="navbar">
+		<div class="container">
+			<div class="two columns twoc">
+				<a href="/"><img
+					src="https://www.tryfoexnow.com/c/foex-site/2015/images/foex-logo.png"
+					class="u-max-full-width"></a>
+			</div>
+			<ul class="navbar-list">
+				<li class="navbar-item"><a class="navbar-link" href="/">Home</a></li>
+				<li class="navbar-item"><a class="navbar-link" href="#"
+					data-popover="#codeNavPopover">Code</a>
+					<div id="codeNavPopover" class="popover">
+						<ul class="popover-list">
+							<li class="popover-item"><a class="popover-link" href="list">Dynamic
+									List</a></li>
+							<li class="popover-item"><a class="popover-link"
+								href="datatable">Datatable</a></li>
+							<li class="popover-item"><a class="popover-link"
+								href="chart">Charts</a></li>
+						</ul>
+					</div></li>
+				<li class="navbar-item"><a class="navbar-link" href="#examples">Examples</a></li>
+				<li class="navbar-item"><a class="navbar-link" href="#"
+					data-popover="#moreNavPopover">Employees</a>
+					<div id="moreNavPopover" class="popover">
+						<ul class="popover-list">
+							<li class="popover-item"><a class="popover-link" href="#">Create
+									profile</a></li>
+							<li class="popover-item"><a class="popover-link" href="#">Post
+									a Job</a></li>
+							<li class="popover-item"><a class="popover-link" href="#">Extensions</a>
+							</li>
+							<li class="popover-item"><a class="popover-link" href="#">Versions</a>
+							</li>
+						</ul>
+					</div></li>
+				<li class="navbar-item"><a class="navbar-link icone"
+					href="javascript:void(0);" onclick="myFunction()">&#9776;</a></li>
+			</ul>
+		</div>
+	</nav>
 
 
 
-    
+
 
 
 </body>
 
 
-  
+
 
 
 
@@ -173,6 +179,6 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 
 </script>
- <script type="text/javascript"  src="/static/js/file.js"></script>
- <script type="text/javascript"  src="/static/js/typed.js"></script>
- </html>
+<script type="text/javascript" src="/static/js/file.js"></script>
+<script type="text/javascript" src="/static/js/typed.js"></script>
+</html>
