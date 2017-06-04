@@ -274,13 +274,13 @@ color: rgb(255, 255, 255) !important;
   <div class="row">
     <div class="six columns">
       <label for="compnaneInput">Company Name</label>
-      <input class="u-full-width" type="text" placeholder="Company Name" id="compnaneInput" value="${company.name}">
+      <input class="u-full-width" type="text" placeholder="Company Name" id="compnaneInput" name="name"  value="${company.name}">
     </div>
     <div class="six columns">
       <label for="countryInput">Country</label>
       <select class="u-full-width" id="countryInput">
       <option value="" disabled="disabled" selected="selected">Select the Country</option>
-      <c:forEach var="country" items="${countries}">
+      <c:forEach var="country" items="${countries}" >
         <option value="${country.id}">${country.name}</option>
         </c:forEach>
       </select>
@@ -290,7 +290,7 @@ color: rgb(255, 255, 255) !important;
   <div class="row">
     <div class="six columns">
       <label for="citynameInput">City Name</label>
-      <input class="u-full-width" type="text" placeholder="City Name" id="citynameInput" value="${company.city}">
+      <input class="u-full-width" type="text" placeholder="City Name" id="citynameInput" name="city"  value="${company.city}">
     </div>
     <div class="six columns">
       <label for="sizeInput">Size</label>
@@ -307,7 +307,7 @@ color: rgb(255, 255, 255) !important;
   <div class="row">
     <div class="six columns">
       <label for="websiteInput">Website</label>
-      <input class="u-full-width" type="text" placeholder="Website" id="websiteInput" value="${company.website}">
+      <input class="u-full-width" type="text" placeholder="Website" id="websiteInput" name="website" value="${company.website}">
     </div>
     <div class="six columns">
       <label for="countryInput">Industry</label>
