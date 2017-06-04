@@ -130,6 +130,7 @@ color: rgb(255, 255, 255) !important;
               </ul>
             </div>
           </li>
+          <li class="navbar-item"><a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a></li>
         </ul>
       </div>
     </nav>
