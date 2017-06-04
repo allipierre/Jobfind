@@ -274,7 +274,7 @@ color: rgb(255, 255, 255) !important;
   <div class="row">
     <div class="six columns">
       <label for="countryInput">Country Name</label>
-      <input class="u-full-width" type="text" placeholder="Country Name" id="countryInput" value="${countries.name}">
+      <input class="u-full-width" type="text" placeholder="Country Name" id="countryInput" name="name" value="${countries.name}">
     </div>
   </div>
    <input class="button-primary" type="submit" value="SAVE">
