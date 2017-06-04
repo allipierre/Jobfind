@@ -104,15 +104,15 @@ color: rgb(255, 255, 255) !important;
 <div class="container utx">
 <form>
   <div class="row">
-    <div class="five columns">
+    <div class="four columns">
       <label id="lb1" for="whatInput">Was</label>
       <input class="u-full-width" type="text" placeholder="(Jobtitel, Firmenname oder ID)" id="whatInput">
     </div>
-    <div class="five columns">
+    <div class="four columns">
       <label id="lb2" for="whereInput">Wo</label>
       <input class="u-full-width" type="text" placeholder="(Ort oder 5-stellige PLZ)" id="whereInput">
     </div>
-    <div class="one column">
+    <div class="two columns">
     <label for="exampleEmailInput"></label>
   <a class=" sub1 button button-primary" href="allejob" id="sub1"><span class=" fa fa fa-eye"></span> Suchen</a>
   </div>
