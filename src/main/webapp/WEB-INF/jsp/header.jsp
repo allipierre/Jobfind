@@ -89,14 +89,14 @@ aa {
 	border-color: red !important;
 }
 
-.navbar-link .iconen {
+.navbar-item.iconen {
 	display: none;
 }
 
 
 @media (max-width: 750px){
 	.navbar-list li:not(.iconen) {display: none;}
-	.navbar-list .iconen {
+	navbar-item.iconen {
 		float: right !important;
 		display: block !important;
 	}
