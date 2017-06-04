@@ -285,7 +285,7 @@ color: rgb(255, 255, 255) !important;
 
 <div class="container">
 
-<form method="POST" action="save-countries">
+<form method="POST" action="save-size">
   <div class="row">
     <div class="six columns">
       <label for="countryInput">Company Size</label>
