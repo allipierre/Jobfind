@@ -85,6 +85,13 @@ color: rgb(255, 255, 255) !important;
 .navbar-link.icon {
     display: none;
 }
+@media screen and (max-width: 750px) {
+.navbar-list li:not(:first-child) {display: none;}
+  .navbar-list a.icon {
+    float: right;
+    display: block;
+  }
+  }
 </style>
 
  
