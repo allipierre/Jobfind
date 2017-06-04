@@ -1,63 +1,10 @@
 /*Responsive Styles*/
 
 @media screen and (max-width : 750px){
-	/*Make dropdown links appear inline*/
-	ul {
-		position: static;
-		display: none;
-	}
-	/*Create vertical spacing*/
-	li {
-		margin-bottom: 1px;
-	}
-	/*Make all menu links full width*/
-	ul li, li a {
-		width: 100%;
-	}
-	/*Display 'show menu' link*/
-	.show-menu {
-		display:block;
-	}
-	
-	.u-max-full-width {
-    max-width: 100%;
-    box-sizing: border-box;
-    display: none !important;
-}
 
 .navbar{
-	background: rgb(255, 255, 255);
-}
-.navbar-list{
-	list-style: none !important;
-}
-.navbar-link{
-	    text-decoration: none !important;
+	display: none !important;
 }
 	
 
 }
-
-/*Style 'show menu' label button and hide it by default*/
-.show-menu {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	text-decoration: none;
-	color: red;
-	background: rgb(25, 197, 137) !important;
-	text-align: center;
-	padding: 10px 0;
-	display: none;
-}
-
-@media screen and (min-width : 750px){
-/*Hide checkbox*/
-input[type=checkbox]{
-    display: none !important;
-}
-}
-
-/*Show menu when invisible checkbox is checked*/
-input[type=checkbox]:checked ~ #pana{
-    display: block;
-}
-
