@@ -318,7 +318,7 @@ color: rgb(255, 255, 255) !important;
         <option value="${industry.id}">${industry.name}</option>
          </c:forEach>
       </select>
-      <form:select value="${industry.id}" items="${countryList}" />
+      <form:select path="${industry.id}" items="${countryList}" />
     </div>
   </div>
   <label for="aboutus">About Us</label>
