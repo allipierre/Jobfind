@@ -25,7 +25,7 @@ public class CtreateCompanyController {
 	private CompanyService companyservice;
 
 	@PostMapping("/save-company")
-	public String saveTask(@ModelAttribute Company company, BindingResult bindingResult, HttpServletRequest request) {
+	public String saveTask(@ModelAttribute Company company, HttpServletRequest request) {
 		// task.setDateCreated(new Date());
 		companyservice.save(company);
 		//request.setAttribute("tasks", companyservice.findAll());
