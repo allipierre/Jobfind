@@ -1,33 +1,46 @@
-.navbar-item.iconen{
-	list-style: none !important;
+/*Responsive Styles*/
+
+@media screen and (max-width : 750px){
+	/*Make dropdown links appear inline*/
+	ul {
+		position: static;
+		display: none;
+	}
+	/*Create vertical spacing*/
+	li {
+		margin-bottom: 1px;
+	}
+	/*Make all menu links full width*/
+	ul li, li a {
+		width: 100%;
+	}
+	/*Display 'show menu' link*/
+	.show-menu {
+		display:block;
+	}
+	
+
 }
 
-
-@media (min-width: 750px){
-.navbar-item.iconen {
+/*Style 'show menu' label button and hide it by default*/
+.show-menu {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-decoration: none;
+	color: red;
+	background: rgb(25, 197, 137) !important;
+	text-align: center;
+	padding: 10px 0;
 	display: none;
 }
+
+@media screen and (min-width : 750px){
+/*Hide checkbox*/
+input[type=checkbox]{
+    display: none !important;
+}
 }
 
-
-@media (max-width: 750px){
-	.navbar-list li:not(.iconen) {display: none;}
-	navbar-item.iconen {
-		float: right !important;
-		display: block !important;
-	}
-}
-
-@media (max-width: 750px) {
-  .navbar-link.responsive {position: relative !important;}
-  .navbar-link.responsive .iconen {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .navbar-link.responsive li {
-    float: none;
+/*Show menu when invisible checkbox is checked*/
+input[type=checkbox]:checked ~ #pana{
     display: block;
-    text-align: left;
-  }
 }
