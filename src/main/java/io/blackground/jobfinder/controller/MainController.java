@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import io.blackground.jobfinder.models.Industry;
@@ -57,7 +58,7 @@ public class MainController {
 	}
 	
 	@GetMapping("/createcompagny")
-	public String createCompany(HttpServletRequest request) {
+	public String createCompany(HttpServletRequest request,BindingResult bindingResult) {
 		List<Industry> list=industryService.findAll();
 		request.setAttribute("countries", countriesservice.findAll());
 		request.setAttribute("companySize", companySizesservice.findAll());
