@@ -19,6 +19,12 @@
 		display:block;
 	}
 	
+	.u-max-full-width {
+    max-width: 100%;
+    box-sizing: border-box;
+    display: none !important;
+}
+	
 
 }
 
