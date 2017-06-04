@@ -313,9 +313,9 @@ color: rgb(255, 255, 255) !important;
     <div class="six columns">
       <label for="countryInput">Industry</label>
       <select class="u-full-width" id="countryInput">
-      <option value="" disabled="disabled" selected="selected">Select the Company Industry</option>
+      <option disabled="disabled" selected="selected">Select the Company Industry</option>
         <c:forEach var="industry" items="${industry}">
-        <option  id="${industry.id}" value="${industry.id}">${industry.name}</option>
+        <option  id="${company.industry}" value="${industry.id}">${industry.name}</option>
          </c:forEach>
       </select>
     </div>
@@ -323,10 +323,6 @@ color: rgb(255, 255, 255) !important;
   <label for="aboutus">About Us</label>
   <textarea class="u-full-width" placeholder="About Us" id="aboutus"  value="${company.aboutUs}"></textarea>
   <input class="button-primary" type="submit" value="SAVE">
-  <div class="six columns">
-      <label for="industryInput">Industry</label>
-      <input class="u-full-width" type="text" placeholder="Company industry" id="industryInput" name="industry"  value="${company.industry}">
-    </div>
 </form>
 
 
@@ -358,8 +354,6 @@ document.addEventListener("DOMContentLoaded", function(){
 		loop: true
 	});
 });
-
-$( "#countryInput" ).change(function() {  $( "#industryInput").val("ann"); });
 
 </script>
  <script type="text/javascript"  src="/static/js/file.js"></script>
