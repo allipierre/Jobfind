@@ -18,8 +18,8 @@
 	}
 }
 
-@media screen and (max-width: 750) {
-  .navbar-link.responsive {position: relative;}
+@media (max-width: 750px) {
+  .navbar-link.responsive {position: relative !important;}
   .navbar-link.responsive .iconen {
     position: absolute;
     right: 0;
