@@ -89,20 +89,6 @@ aa {
 	border-color: red !important;
 }
 
-/* Hide the link that should open and close the topnav on small screens */
-.navbar-link.iconen {
-	display: none;
-}
-
-@media (max-width: 750px){
-	.navbar-list li:not (:first-child ) {
-		display: none !important;
-	}
-	.navbar-list.iconen {
-		float: right !important;
-		display: block !important;
-	}
-}
 
 
 </style>
