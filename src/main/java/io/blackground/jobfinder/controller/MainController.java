@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import io.blackground.jobfinder.services.CompanyService;
+import io.blackground.jobfinder.services.CountriesService;
 import io.blackground.jobfinder.services.JobService;
 
 
@@ -28,6 +29,9 @@ public class MainController {
 	
 	@Autowired
 	private CompanyService companyservice;
+	
+	@Autowired
+	private CountriesService countriesservice;
 
 	@GetMapping("/")
 	public String hello() {
@@ -42,7 +46,7 @@ public class MainController {
 	
 	@GetMapping("/createcompagny")
 	public String createCompany(HttpServletRequest request) {
-		request.setAttribute("countries", companyservice.findAll());
+		request.setAttribute("countries", countriesservice.findAll());
 		return "createcompagny";
 	}
 	
