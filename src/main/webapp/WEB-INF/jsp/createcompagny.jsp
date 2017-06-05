@@ -334,10 +334,7 @@ color: rgb(255, 255, 255) !important;
       <input class="u-full-width" type="text" placeholder="company Location" id="companyLocation" name="location"  value="${company.location}">
     </div>
     
-    <div class="one columns">
-      <label for="companySize">Size</label>
-      <input class="u-full-width" type="text" placeholder="company Size" id="companySize" name="numberEmployees"  value="${company.numberEmployees}">
-    </div>
+    
   </div>
   
   <input class="button-primary" type="submit" value="SAVE">
