@@ -322,7 +322,7 @@ color: rgb(255, 255, 255) !important;
     </div>
   </div>
   <label for="aboutus">About Us</label>
-  <textarea class="u-full-width" placeholder="About Us" id="about"  value="${company.about}"></textarea>
+  <textarea class="u-full-width" placeholder="About Us" id="about"  name="${company.about}" value="${company.about}"></textarea>
   <div class="row">
   <div class="one columns">
       <label for="companyIndustry">Industry</label>
