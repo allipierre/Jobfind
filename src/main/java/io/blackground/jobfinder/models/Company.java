@@ -27,7 +27,7 @@ public class Company {
 	private String name;
 	private String website;
 	private String aboutUs;
-	private int city;
+	private String city;
 	private String Location;
 
 	private String Industry;

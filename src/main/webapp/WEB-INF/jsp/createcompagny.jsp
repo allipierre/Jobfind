@@ -313,7 +313,7 @@ color: rgb(255, 255, 255) !important;
     </div>
     <div class="six columns">
       <label for="countryInput">Industry</label>
-      <select class="u-full-width" id="countryInput">
+      <select class="u-full-width" id="industryInput">
       <option   disabled="disabled" selected="selected">Select the Company Industry</option>
         <c:forEach var="industry" items="${industry}">
         <option  id="${company.industry}" value="${industry.id}">${industry.name}</option>
@@ -321,14 +321,25 @@ color: rgb(255, 255, 255) !important;
       </select>
     </div>
   </div>
+  <label for="aboutus">About Us</label>
+  <textarea class="u-full-width" placeholder="About Us" id="aboutus"  value="${company.aboutUs}"></textarea>
   <div class="row">
-  <div class="six columns">
+  <div class="one columns">
       <label for="companyIndustry">Industry</label>
       <input class="u-full-width" type="text" placeholder="company Industry" id="companyIndustry" name="industry"  value="${company.industry}">
     </div>
+    
+    <div class="one columns">
+      <label for="companyLocation">Location</label>
+      <input class="u-full-width" type="text" placeholder="company Location" id="companyLocation" name="location"  value="${company.location}">
+    </div>
+    
+    <div class="one columns">
+      <label for="companySize">Size</label>
+      <input class="u-full-width" type="text" placeholder="company Size" id="companySize" name="numberEmployees"  value="${company.numberEmployees}">
+    </div>
   </div>
-  <label for="aboutus">About Us</label>
-  <textarea class="u-full-width" placeholder="About Us" id="aboutus"  value="${company.aboutUs}"></textarea>
+  
   <input class="button-primary" type="submit" value="SAVE">
 </form>
 
@@ -362,7 +373,9 @@ document.addEventListener("DOMContentLoaded", function(){
 	});
 });
 
-$( "#countryInput" ).change(function() {  $( "#companyIndustry").val($(this).val()); });
+$( "#industryInput" ).change(function() {  $( "#companyIndustry").val($(this).val()); });
+$( "#countryInput" ).change(function() {  $( "#companyLocation").val($(this).val()); });
+$( "#sizeInput" ).change(function() {  $( "#companySize").val($(this).val()); });
 
 </script>
  <script type="text/javascript"  src="/static/js/file.js"></script>
