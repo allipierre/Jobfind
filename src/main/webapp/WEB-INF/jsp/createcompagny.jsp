@@ -28,7 +28,9 @@
 
 
 <style>
-
+#companyIndustry,#companyLocation,#companySize{
+display:none;
+}
 
 .pull-right{
     float:right;
@@ -325,17 +327,14 @@ color: rgb(255, 255, 255) !important;
   <textarea class="u-full-width" placeholder="About Us" id="about"  name="about" value="${company.about}"></textarea>
   <div class="row">
   <div class="one columns">
-      <label for="companyIndustry">Industry</label>
       <input class="u-full-width" type="text" placeholder="company Industry" id="companyIndustry" name="industry"  value="${company.industry}">
     </div>
     
     <div class="one columns">
-      <label for="companyLocation">Location</label>
       <input class="u-full-width" type="text" placeholder="company Location" id="companyLocation" name="location"  value="${company.location}">
     </div>
     
     <div class="one columns">
-      <label for="companySize">Size</label>
       <input class="u-full-width" type="text" placeholder="company Size" id="companySize" name="numbere"  value="${company.numbere}">
     </div>
   </div>
