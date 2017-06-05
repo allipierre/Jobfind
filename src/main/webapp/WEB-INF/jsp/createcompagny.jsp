@@ -2,6 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+
 <html lang="en">
 <head>
 
@@ -302,6 +303,11 @@ color: rgb(255, 255, 255) !important;
          </c:forEach>
       </select>
     </div>
+    
+    <div class="six columns">
+      <label for="companyIndustry">Industry</label>
+      <input class="u-full-width" type="text" placeholder="company Industry" id="companyIndustry" name="industry"  value="${company.industry}">
+    </div>
   </div>
   
   
@@ -312,7 +318,7 @@ color: rgb(255, 255, 255) !important;
     </div>
     <div class="six columns">
       <label for="countryInput">Industry</label>
-      <select class="u-full-width" id="countryInput" name="company.industry" value="company.industry">
+      <select class="u-full-width" id="countryInput">
       <option   disabled="disabled" selected="selected">Select the Company Industry</option>
         <c:forEach var="industry" items="${industry}">
         <option  id="${company.industry}" value="${industry.id}">${industry.name}</option>
