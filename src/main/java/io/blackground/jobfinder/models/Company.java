@@ -30,8 +30,8 @@ public class Company {
 	private String city;
 	private String location;
 
-	private String Industry;
-	private int numberEmployees;
+	private String industry;
+	private int numbere;
 
 	//private byte[] logo;
 
