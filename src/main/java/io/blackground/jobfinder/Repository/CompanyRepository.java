@@ -29,7 +29,7 @@ public interface CompanyRepository extends CrudRepository<Company, Integer> {
 			+ ",c.numbere as numbere from industry i "
 			+ "inner join company c "
 			+ "on "
-			+ "i.id=c.industry::integer", nativeQuery = true)
+			+ "i.id=c.industry", nativeQuery = true)
 	public List<Company> findJoin();
 	
 	
