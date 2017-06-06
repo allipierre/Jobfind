@@ -35,11 +35,10 @@ public class Company {
 	private String city;
 	private int location;
 
-	private int industry;
 	private int numbere;
 
 	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "industries_id")
+	@JoinColumn(name = "industry_id")
 	private Industry industries;
 
 	// private byte[] logo;
