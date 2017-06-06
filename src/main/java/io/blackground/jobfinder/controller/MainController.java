@@ -50,11 +50,7 @@ public class MainController {
 		return "index";
 	}
 	
-	@GetMapping("/allejob")
-	public String alleJob(HttpServletRequest request) {
-		request.setAttribute("taskse", companyservice.findAll());
-		return "allejob";
-	}
+	
 	
 	@GetMapping("/createcompagny")
 	public String createCompany(HttpServletRequest request) {
