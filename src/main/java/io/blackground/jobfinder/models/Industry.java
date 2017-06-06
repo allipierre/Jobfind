@@ -11,6 +11,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -34,8 +35,8 @@ public class Industry {
 	private String name;
 	
 	
-	@OneToOne(mappedBy = "industry")
-    private Company company;
+	@OneToMany(mappedBy = "industry", cascade = CascadeType.ALL)
+	private Set<Company> company;
 	
 
 }
