@@ -27,10 +27,10 @@ import javax.persistence.OneToOne;
 @Entity
 public class Industry {
 
-	@Column(name="ides")
-	private long id;
-	@Column(name="namens")
-	private String name;
+	
+	private long ides;
+	
+	private String namens;
 	
 	
 	private Set<Company> company;
@@ -42,28 +42,28 @@ public class Industry {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	public long getId() {
-		return id;
+		return ides;
 	}
 
 	/**
 	 * @param id the id to set
 	 */
 	public void setId(long id) {
-		this.id = id;
+		this.ides = id;
 	}
 
 	/**
 	 * @return the name
 	 */
 	public String getName() {
-		return name;
+		return namens;
 	}
 
 	/**
 	 * @param name the name to set
 	 */
 	public void setName(String name) {
-		this.name = name;
+		this.namens = name;
 	}
 
 	/**
