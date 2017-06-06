@@ -296,7 +296,7 @@ color: rgb(255, 255, 255) !important;
 			<div class="panel panel-light-content hidden-xs hidden-sm " data-automation="jobseeker-jobs">
         <div class="panel-heading">
             <small class="text-muted"> ${task.name}</small>
-            <p class="headline3"><strong><a href="/en/employer/groupe-agri-revolution/recherche-dun-technicien-agricole.html">${task.name} </a></strong> <small>(Full time)</small></p>
+            <p class="headline3"><strong><a href="/en/employer/groupe-agri-revolution/recherche-dun-technicien-agricole.html">${task.namens} </a></strong> <small>(Full time)</small></p>
         </div>
         <div class="panel-footer clearfix">
             <ul class="list-inline">
