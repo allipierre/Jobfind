@@ -23,7 +23,7 @@ import javax.persistence.OneToOne;
 @Getter
 @Setter
 @Entity
-@NamedNativeQuery(name = "Company.findByidIs", query = "SELECT id,name,website,about,city,location,industry_id,numbere FROM Company t", resultClass = Company.class)
+@NamedNativeQuery(name = "Company.findByidIs", query = "SELECT id,name,website,about,city,location,industry,numbere FROM Company t", resultClass = Company.class)
 public class Company {
 
 	@Id
@@ -35,12 +35,13 @@ public class Company {
 	private String about;
 	private String city;
 	private int location;
+	private int industry;
 
 	private int numbere;
 
 	@ManyToOne
-    @JoinColumn(name = "industry_id")
-	private Industry industry;
+    @JoinColumn(name = "industry")
+	private Industry industries;
 
 	// private byte[] logo;
 

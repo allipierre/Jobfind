@@ -35,7 +35,7 @@ public class Industry {
 	private String name;
 	
 	
-	@OneToMany(mappedBy = "industry")
+	@OneToMany(mappedBy = "industries")
 	private List<Company> company;
 	
 
