@@ -37,9 +37,7 @@ public class Company {
 
 	private int numbere;
 
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "industry_id")
-	private Industry industries;
+	
 
 	// private byte[] logo;
 
