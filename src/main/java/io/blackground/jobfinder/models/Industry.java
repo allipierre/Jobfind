@@ -28,7 +28,7 @@ import javax.persistence.OneToOne;
 @Entity
 public class Industry {
 
-	
+	@Column(name="ides")
 	private long id;
 
 	private String namens;
