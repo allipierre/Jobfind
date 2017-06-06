@@ -27,6 +27,7 @@ public class Company {
 	private String about;
 	private String city;
 	private int location;
+	private int industry_id;
 	
 
 	private int numbere;
