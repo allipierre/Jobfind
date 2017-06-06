@@ -36,7 +36,7 @@ public class Industry {
 	
 	
 	@OneToMany(mappedBy = "industry", cascade = CascadeType.ALL)
-	private Set<Company> company;
+	private List<Company> company;
 	
 
 }
