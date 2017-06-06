@@ -10,16 +10,14 @@ import org.springframework.data.repository.CrudRepository;
 
 import io.blackground.jobfinder.models.Company;
 
+
 /**
  * @author yotti
  *
  */
 
 public interface CompanyRepository extends CrudRepository<Company, Integer> {
-
-	@Query("select id,city,industry,location,name,numbere,website from Company")
-	List<Company> allCompany();
-
-	@Query("select id,city,industry,location,name,numbere,website from Company")
-	List<Company> findAll();
+	
+	@Query(nativeQuery = true)
+    public List<Company> findByIDIs();
 }
