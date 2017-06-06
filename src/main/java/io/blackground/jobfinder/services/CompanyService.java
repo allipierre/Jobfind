@@ -14,7 +14,6 @@ import org.springframework.stereotype.Service;
 import io.blackground.jobfinder.Repository.CompanyRepository;
 import io.blackground.jobfinder.models.Company;
 
-
 /**
  * @author yotti
  *
@@ -42,12 +41,12 @@ public class CompanyService {
 
 	}
 
-	public List<Company> findAll(Pageable p) {
-		List<Company> tasks = new ArrayList<>();
-		for (Company task : companyRepository.findAll()) {
-			tasks.add(task);
+	public List<Company> findAlle() {
+		List<Company> companies = new ArrayList<>();
+		for (Company company : companyRepository.allCompany()) {
+			companies.add(company);
 		}
-		return tasks;
+		return companies;
 
 	}
 
