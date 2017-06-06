@@ -29,7 +29,6 @@ public class Industry {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "industry_id")
 	private long id;
 
 	private String name;
