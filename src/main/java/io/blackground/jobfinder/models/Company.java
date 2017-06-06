@@ -30,6 +30,20 @@ public class Company {
 	private int industry_id;
 	
 
+	/**
+	 * @return the industry_id
+	 */
+	public int getIndustry_id() {
+		return industry_id;
+	}
+
+	/**
+	 * @param industry_id the industry_id to set
+	 */
+	public void setIndustry_id(int industry_id) {
+		this.industry_id = industry_id;
+	}
+
 	private int numbere;
 
 	private Industry industry;
