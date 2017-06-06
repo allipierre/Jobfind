@@ -26,7 +26,7 @@ public interface CompanyRepository extends CrudRepository<Company, Integer> {
 	@Query(value = "select i.name as industry,c.id id,c.website as website, "
 			+ "c.about as about, c.city as city, c.location as location,c.numbere as numbere "
 			+ "  from industry i inner join company c on "
-			+ "i.id=27", nativeQuery = true)
+			+ "i.id=17", nativeQuery = true)
 	public List<Company> findJoin();
 
 }
