@@ -10,11 +10,14 @@ package io.blackground.jobfinder.models;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.NamedNativeQuery;
+import javax.persistence.OneToOne;
 
 @Getter
 @Setter
@@ -34,6 +37,10 @@ public class Company {
 
 	private int industry;
 	private int numbere;
+
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "industries_id")
+	private Industry industries;
 
 	// private byte[] logo;
 

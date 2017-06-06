@@ -12,12 +12,14 @@ import lombok.Setter;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 @Getter
 @Setter
@@ -31,9 +33,8 @@ public class Industry {
 	private String name;
 	
 	
-	@OneToMany( targetEntity=Company.class )
-	@JoinColumn(name="id")
-    private List companyList;
+	@OneToOne(mappedBy = "Industry")
+    private Company companyList;
 	
 
 }
