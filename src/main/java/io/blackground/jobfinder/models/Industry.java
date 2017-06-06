@@ -31,7 +31,7 @@ public class Industry {
 	
 	private long id;
 
-	private String name;
+	private String namens;
 	
 	
 	private Set<Company> company;
@@ -57,14 +57,14 @@ public class Industry {
 	 * @return the name
 	 */
 	public String getName() {
-		return name;
+		return namens;
 	}
 
 	/**
 	 * @param name the name to set
 	 */
 	public void setName(String name) {
-		this.name = name;
+		this.namens = name;
 	}
 
 	/**
