@@ -30,8 +30,8 @@ public class Industry {
 
 	@Column(name="ides")
 	private long id;
-
-	private String namens;
+	@Column(name="namens")
+	private String name;
 	
 	
 	private Set<Company> company;
@@ -57,14 +57,14 @@ public class Industry {
 	 * @return the name
 	 */
 	public String getName() {
-		return namens;
+		return name;
 	}
 
 	/**
 	 * @param name the name to set
 	 */
 	public void setName(String name) {
-		this.namens = name;
+		this.name = name;
 	}
 
 	/**
