@@ -14,20 +14,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.NamedNativeQueries;
 import javax.persistence.NamedNativeQuery;
-import javax.persistence.NamedQuery;
 
-import org.springframework.data.jpa.repository.Query;
 
 
 @Getter
 @Setter
 @Entity
-@NamedNativeQuery(name = "Company.findByidIs",
-        query="SELECT * FROM Company t",
-        resultClass = Company.class
-)
+@NamedNativeQuery(name = "Company.findByidIs", query = "SELECT id,name,website,about,city,location,industry,numbere FROM Company t", resultClass = Company.class)
 public class Company {
 
 	@Id
@@ -43,6 +37,6 @@ public class Company {
 	private String industry;
 	private int numbere;
 
-	//private byte[] logo;
+	// private byte[] logo;
 
 }
