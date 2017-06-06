@@ -16,6 +16,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 
 @Getter
@@ -31,6 +32,7 @@ public class Industry {
 	
 	
 	@OneToMany( targetEntity=Company.class )
+	@JoinColumn(name="id")
     private List companyList;
 	
 
