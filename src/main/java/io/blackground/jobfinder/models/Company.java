@@ -16,12 +16,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedNativeQuery;
 
-
-
 @Getter
 @Setter
 @Entity
-@NamedNativeQuery(name = "Company.findByidIs", query = "SELECT id,name,website,about,city,location,industry,numbere FROM Company t", resultClass = Company.class)
+@NamedNativeQuery(name = "Company.findByidIs", query = "select i.name as industry,"
+		+ "c.id id,c.website as website, c.about as about, "
+		+ "c.city as city, c.location as location,c.numbere as numbere "
+		+ "from industry i inner join company c on i.id=c.industry::integer", resultClass = Company.class)
 public class Company {
 
 	@Id
