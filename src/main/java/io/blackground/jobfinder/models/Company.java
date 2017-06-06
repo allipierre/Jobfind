@@ -24,8 +24,8 @@ import org.springframework.data.jpa.repository.Query;
 @Getter
 @Setter
 @Entity
-@NamedNativeQuery(name = "Company.findByIDIs",
-        query="SELECT * FROM Company t WHERE t.id = 1",
+@NamedNativeQuery(name = "Company.findByidIs",
+        query="SELECT * FROM Company t WHERE t.id = 27",
         resultClass = Company.class
 )
 public class Company {

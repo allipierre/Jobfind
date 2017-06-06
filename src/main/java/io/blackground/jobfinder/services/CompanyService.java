@@ -35,7 +35,7 @@ public class CompanyService {
 
 	public List<Company> findAll() {
 		List<Company> jobs = new ArrayList<>();
-		for (Company job : companyRepository.findByIDIs()) {
+		for (Company job : companyRepository.findByidIs()) {
 			jobs.add(job);
 		}
 		return jobs;
