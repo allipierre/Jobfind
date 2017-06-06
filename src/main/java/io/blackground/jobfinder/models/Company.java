@@ -27,7 +27,7 @@ public class Company {
 	private String about;
 	private String city;
 	private int location;
-	private int industry_id;
+	
 
 	private int numbere;
 
@@ -128,17 +128,13 @@ public class Company {
 	/**
 	 * @return the industry_id
 	 */
-	public int getIndustry_id() {
-		return industry_id;
-	}
+	
 
 	/**
 	 * @param industry_id
 	 *            the industry_id to set
 	 */
-	public void setIndustry_id(int industry_id) {
-		this.industry_id = industry_id;
-	}
+	
 
 	/**
 	 * @return the numbere
