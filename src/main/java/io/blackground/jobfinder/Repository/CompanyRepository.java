@@ -19,4 +19,7 @@ public interface CompanyRepository extends CrudRepository<Company, Integer> {
 
 	@Query("select id,city,industry,location,name,numbere,website from Company")
 	List<Company> allCompany();
+
+	@Query("select id,city,industry,location,name,numbere,website from Company")
+	List<Company> findAll();
 }
