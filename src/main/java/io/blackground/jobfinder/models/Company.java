@@ -170,7 +170,7 @@ public class Company {
 	 * @return the industry
 	 */
 	@ManyToOne
-	@JoinColumn(name = "industry_id")
+	@JoinColumn(name = "industry_id",insertable = false, updatable = false)
 	public Industry getIndustry() {
 		return industry;
 	}
