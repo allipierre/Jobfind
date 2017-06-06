@@ -34,13 +34,12 @@ public class Company {
 	private String about;
 	private String city;
 	private int location;
-	private int industry;
 
 	private int numbere;
 
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "id")
-	private Industry industries;
+	private Industry industry;
 
 	// private byte[] logo;
 
