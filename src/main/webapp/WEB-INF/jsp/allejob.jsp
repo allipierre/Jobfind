@@ -310,7 +310,7 @@ color: rgb(255, 255, 255) !important;
                         <i class="icon icon-location"></i>${task.location}         </li>
                 
                 <li class="panel-footer-icon-wrapper">
-                    <i class="icon icon-bookmark"></i>${task.industry}  </li>
+                    <i class="icon icon-bookmark"></i>${task.industry_id}  </li>
                 <li class="pull-right">
                     <a href="/en/employer/groupe-agri-revolution/recherche-dun-technicien-agricole.html" class="btn btn-info pull-right icon-eye" ><span class=" fa fa fa-eye"></span> View Job</a>
                 </li>
