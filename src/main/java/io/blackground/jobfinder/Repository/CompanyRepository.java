@@ -18,6 +18,6 @@ import io.blackground.jobfinder.models.Company;
 
 public interface CompanyRepository extends CrudRepository<Company, Integer> {
 	
-    @Query("select c from company")
+    @Query("select id from company")
 	  List<Company> allCompany();
 }
