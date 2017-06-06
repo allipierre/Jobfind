@@ -33,7 +33,8 @@ public class Industry {
 	private String name;
 	
 	
-
+	@OneToOne(mappedBy = "industry")
+    private Company company;
 	
 
 }
