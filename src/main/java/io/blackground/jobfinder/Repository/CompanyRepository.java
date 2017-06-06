@@ -27,7 +27,7 @@ public interface CompanyRepository extends CrudRepository<Company, Integer> {
 			+ " id,c.website as website, c.about as about,"
 			+ " c.city as city, c.location as location"
 			+ ",c.numbere as numbere from industry i "
-			+ ",company c ", nativeQuery = true)
+			+ ",company c ", nativeQuery = false)
 	public List<Company> findJoin();
 	
 	
