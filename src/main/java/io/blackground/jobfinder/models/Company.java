@@ -39,7 +39,7 @@ public class Company {
 	private int numbere;
 
 	@ManyToOne
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "industry_id")
 	private Industry industry;
 
 	// private byte[] logo;
