@@ -19,10 +19,7 @@ import javax.persistence.NamedNativeQuery;
 @Getter
 @Setter
 @Entity
-@NamedNativeQuery(name = "Company.findByidIs", query = "select i.name as industry,"
-		+ "c.id id,c.website as website, c.about as about, c.name as name, "
-		+ "c.city as city, c.location as location,c.numbere as numbere "
-		+ "from industry i inner join company c on i.id=c.industry::integer", resultClass = Company.class)
+@NamedNativeQuery(name = "Company.findByidIs", query = "SELECT c FROM Company c", resultClass = Company.class)
 public class Company {
 
 	@Id
