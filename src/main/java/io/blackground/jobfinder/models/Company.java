@@ -32,6 +32,8 @@ public class Company {
 	private int industry_id;
 
 	private int numbere;
+	@ManyToOne
+	@JoinColumn(name = "industry_id")
 	private Industry industry;
 
 	/**
@@ -157,8 +159,7 @@ public class Company {
 	/**
 	 * @return the industry
 	 */
-	@ManyToOne
-	@JoinColumn(name = "industry_id")
+	
 	public Industry getIndustry() {
 		return industry;
 	}

@@ -34,7 +34,7 @@ public class Industry {
 
 	private String name;
 	
-	
+	@OneToMany(mappedBy = "industry", cascade = CascadeType.ALL)
 	private Set<Company> company;
 	
 
@@ -69,7 +69,7 @@ public class Industry {
 	/**
 	 * @return the company
 	 */
-	@OneToMany(mappedBy = "industry", cascade = CascadeType.ALL)
+	
 	public Set<Company> getCompany() {
 		return company;
 	}
