@@ -25,7 +25,7 @@ public interface CompanyRepository extends CrudRepository<Company, Integer> {
 	//@Query(value = "SELECT id,name,website,about,city,location,industry,numbere FROM Company t", nativeQuery = true)
 	@Query(value = "SELECT c.name, c.website, "
 			+ "i.name FROM industry i, company c "
-			+ "WHERE c.industry = i.iD ", nativeQuery = true)
+			+ "WHERE i.id=c.industry::integer", nativeQuery = true)
 	public List<Company> findJoin();
 	
 	
