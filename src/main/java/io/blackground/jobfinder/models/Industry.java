@@ -28,19 +28,20 @@ import javax.persistence.OneToOne;
 @Entity
 public class Industry {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	
 	private long id;
 
 	private String name;
 	
-	@OneToMany(mappedBy = "industry", cascade = CascadeType.ALL)
+	
 	private Set<Company> company;
 	
 
 	/**
 	 * @return the id
 	 */
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	public long getId() {
 		return id;
 	}
@@ -69,7 +70,7 @@ public class Industry {
 	/**
 	 * @return the company
 	 */
-	
+	@OneToMany(mappedBy = "industry", cascade = CascadeType.ALL)
 	public Set<Company> getCompany() {
 		return company;
 	}

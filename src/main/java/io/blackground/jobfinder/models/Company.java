@@ -20,8 +20,6 @@ import javax.persistence.NamedNativeQuery;
 @NamedNativeQuery(name = "Company.findByidIs", query = "SELECT id,name,website,about,city,location,industry_id,numbere FROM Company t", resultClass = Company.class)
 public class Company {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
 	private String name;
@@ -32,13 +30,14 @@ public class Company {
 	private int industry_id;
 
 	private int numbere;
-	@ManyToOne
-	@JoinColumn(name = "industry_id")
+
 	private Industry industry;
 
 	/**
 	 * @return the id
 	 */
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	public long getId() {
 		return id;
 	}
@@ -159,7 +158,8 @@ public class Company {
 	/**
 	 * @return the industry
 	 */
-	
+	@ManyToOne
+	@JoinColumn(name = "industry_id")
 	public Industry getIndustry() {
 		return industry;
 	}
