@@ -86,7 +86,7 @@ color: rgb(255, 255, 255);
   <div class="row">
     <div class="six columns">
       <label class="lab" for="exampleEmailInput">Password</label>
-      <input class="u-full-width" type="text" placeholder="Password" id="exampleEmailInput"> <span>${error}</span> <input
+      <input class="u-full-width" type="password" placeholder="Password" id="exampleEmailInput"> <span>${error}</span> <input
 					type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
     </div>
   </div>
