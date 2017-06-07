@@ -36,10 +36,10 @@ display:none;
     float:right;
 }
 
-.cancel{
+.button.button-primary, button.button-primary, input[type="submit"].cancel.button-primary, input[type="reset"].button-primary, input[type="button"].button-primary{
     background-color: rgb(255, 255, 255) !important;
     border-color: rgb(167, 167, 167) !important;
-   color: rgb(0, 0, 0);
+   color: rgb(0, 0, 0)!important;
 }
 
 .cancel:hover{
