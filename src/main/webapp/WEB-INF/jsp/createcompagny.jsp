@@ -278,7 +278,7 @@ color: rgb(255, 255, 255) !important;
   <div class="row">
     <div class="six columns">
       <label for="compnaneInput">Company Name</label>
-      <input class="u-full-width" type="text" placeholder="Company Name" id="compnaneInput" name="name"  value="${company.companyName}">
+      <input class="u-full-width" type="text" placeholder="Company Name" id="compnaneInput" name="companyName"  value="${company.companyName}">
     </div>
     <div class="six columns">
       <label for="countryInput">Country</label>
