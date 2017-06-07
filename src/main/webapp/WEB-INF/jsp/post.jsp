@@ -277,31 +277,40 @@ color: rgb(255, 255, 255) !important;
 <form method="POST" action="save-company">
   <div class="row">
     <div class="six columns">
-      <label for="compnaneInput">Company Name</label>
-      <input class="u-full-width" type="text" placeholder="Company Name" id="compnaneInput" name="companyName"  value="${company.companyName}">
+      <label for="compnaneInput">Job title</label>
+      <input class="u-full-width" type="text" placeholder="Job Title (e.g. Accountant)" id="titleInput" name="title"  value="${job.title}">
     </div>
     <div class="six columns">
-      <label for="countryInput">Country</label>
+      <label for="countryInput">Salary</label>
       <select class="u-full-width" id="countryInput">
-      <option value="" disabled="disabled" selected="selected">Select the Country</option>
-      <c:forEach var="country" items="${countries}" >
-        <option id="countryID" value="${country.id}">${country.name}</option>
+      <option value="" disabled="disabled" selected="selected">Please select monthly salary</option>
+      <c:forEach var="salary" items="${salary}" >
+        <option id="csalaryID" value="${salary.id}">${salary.value}</option>
         </c:forEach>
       </select>
     </div>
   </div>
+  <label for="descriptioninput">Job Description</label>
+  <textarea class="u-full-width" placeholder="Job Description" id="descriptioninput"  name="description" value="${job.description}"></textarea>
   
+  <label for="positioninput">Position Requirements</label>
+  <textarea class="u-full-width" placeholder="Position Requirements" id="positioninput"  name="position" value="${job.position}"></textarea>
   <div class="row">
     <div class="six columns">
-      <label for="citynameInput">City Name</label>
-      <input class="u-full-width" type="text" placeholder="City Name" id="citynameInput" name="city"  value="${company.city}">
+      <label for="categoryInput">Job category</label>
+     <select class="u-full-width" id="categoryinput">
+      <option value="" disabled="disabled" selected="selected">Please specify job category for this vacancy</option>
+        <c:forEach var="category" items="${category}">
+        <option value="${category.id}">${category.name}</option>
+         </c:forEach>
+      </select>
     </div>
     <div class="six columns">
-      <label for="sizeInput">Size</label>
-      <select class="u-full-width" id="sizeInput">
-      <option value="" disabled="disabled" selected="selected">Select the Company Size (No. of employees)</option>
-        <c:forEach var="companySize" items="${companySize}">
-        <option value="${companySize.id}">${companySize.value}</option>
+      <label for="contratInput">Contract Type</label>
+      <select class="u-full-width" id="contratInput">
+      <option value="" disabled="disabled" selected="selected">Please select the contract type</option>
+        <c:forEach var="contrat" items="${contrat}">
+        <option value="${contrat.id}">${contrat.name}</option>
          </c:forEach>
       </select>
     </div>
@@ -310,21 +319,43 @@ color: rgb(255, 255, 255) !important;
   
   <div class="row">
     <div class="six columns">
-      <label for="websiteInput">Website</label>
-      <input class="u-full-width" type="text" placeholder="Website" id="websiteInput" name="website" value="${company.website}">
+      <label for="cityInput">City</label>
+     <select class="u-full-width" id="cityInput">
+        <c:forEach var="city" items="${city}">
+        <option value="${city.id}">${city.name}</option>
+         </c:forEach>
+      </select>
     </div>
     <div class="six columns">
-      <label for="countryInput">Industry</label>
-      <select class="u-full-width" id="industryInput">
-      <option   disabled="disabled" selected="selected">Select the Company Industry</option>
-        <c:forEach var="industry" items="${industry}">
-        <option value="${industry.id}">${industry.industryName}</option>
+      <label for="countryInput">Country</label>
+      <select class="u-full-width" id="countryInput">
+        <c:forEach var="country" items="${country}">
+        <option value="${country.id}">${country.name}</option>
          </c:forEach>
       </select>
     </div>
   </div>
-  <label for="aboutus">About Us</label>
-  <textarea class="u-full-width" placeholder="About Us" id="about"  name="about" value="${company.about}"></textarea>
+  
+  <div class="row">
+    <div class="six columns">
+      <label for="dateInput">Start date</label>
+     <select class="u-full-width" id="dateInput">
+        <c:forEach var="startdate" items="${startdate}">
+        <option value="${startdate.id}">${city.published}</option>
+         </c:forEach>
+      </select>
+    </div>
+    <div class="six columns">
+      <label for="countryInput">Country</label>
+      <select class="u-full-width" id="countryInput">
+        <c:forEach var="country" items="${country}">
+        <option value="${country.id}">${country.name}</option>
+         </c:forEach>
+      </select>
+    </div>
+  </div>
+  
+  
   <div class="row">
   <div class="one columns">
       <input class="u-full-width" type="text" placeholder="company Industry" id="companyIndustry" name="industryid"  value="${company.industryid}">
@@ -339,6 +370,7 @@ color: rgb(255, 255, 255) !important;
     </div>
   </div>
   
+  <input class="button-primary" type="submit" value="CANCEL">
   <input class="button-primary" type="submit" value="SAVE">
 </form>
 

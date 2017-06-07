@@ -30,10 +30,73 @@ public class Job {
 	private String minimumDegree;
 	private int slots;
 	private int companyid;
-
+	private String title;
+	private String contrat;
+	private String city;
+	private String country;
 	private Date published;
 
 	private Company company;
+
+	/**
+	 * @return the country
+	 */
+	public String getCountry() {
+		return country;
+	}
+
+	/**
+	 * @param country
+	 *            the country to set
+	 */
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
+	/**
+	 * @return the contrat
+	 */
+	public String getContrat() {
+		return contrat;
+	}
+
+	/**
+	 * @param contrat
+	 *            the contrat to set
+	 */
+	public void setContrat(String contrat) {
+		this.contrat = contrat;
+	}
+
+	/**
+	 * @return the city
+	 */
+	public String getCity() {
+		return city;
+	}
+
+	/**
+	 * @param city
+	 *            the city to set
+	 */
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	/**
+	 * @return the title
+	 */
+	public String getTitle() {
+		return title;
+	}
+
+	/**
+	 * @param title
+	 *            the title to set
+	 */
+	public void setTitle(String title) {
+		this.title = title;
+	}
 
 	/**
 	 * @return the companyid
