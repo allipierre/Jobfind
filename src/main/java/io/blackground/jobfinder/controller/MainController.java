@@ -72,6 +72,13 @@ public class MainController {
 		return "createcountries";
 	}
 	
+	@GetMapping("/post")
+	public String postJob(HttpServletRequest request) {
+		//request.setAttribute("taskse", companyservice.findAll());
+		//request.setAttribute("tasksen", industryService.findAll());
+		return "post";
+	}
+	
 	
 	
 	

@@ -3,6 +3,10 @@
  */
 package io.blackground.jobfinder.models;
 
+import java.util.Set;
+
+import javax.persistence.CascadeType;
+
 /**
  * @author yotti
  *
@@ -14,6 +18,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 
 
@@ -36,6 +41,23 @@ public class Company {
 	private Industry industry;
 	private Countries countries;
 	private CompanySize companysize;
+	
+	private Set<Job> job;
+
+	/**
+	 * @return the job
+	 */
+	@OneToMany(mappedBy = "company", targetEntity = Job.class, cascade = CascadeType.ALL)
+	public Set<Job> getJob() {
+		return job;
+	}
+
+	/**
+	 * @param job the job to set
+	 */
+	public void setJob(Set<Job> job) {
+		this.job = job;
+	}
 
 	/**
 	 * @return the companysize
