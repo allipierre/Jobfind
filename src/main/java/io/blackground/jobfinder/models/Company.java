@@ -14,7 +14,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.Transient;
 
 
 
@@ -30,8 +29,21 @@ public class Company {
 	private String about;
 	private String city;
 	private int location;
-	 @Transient
 	private int industryid;
+
+	/**
+	 * @return the industryid
+	 */
+	public int getIndustryid() {
+		return industryid;
+	}
+
+	/**
+	 * @param industryid the industryid to set
+	 */
+	public void setIndustryid(int industryid) {
+		this.industryid = industryid;
+	}
 
 	private int numbere;
 
@@ -114,16 +126,7 @@ public class Company {
 		this.city = city;
 	}
 
-	/**
-	 * @return the industryid
-	 */
-	public int getIndustryid() {
-		return industryid;
-	}
-
-	public void setIndustryId(int industryid) {
-		this.industryid = industryid;
-	}
+	
 
 	/**
 	 * @param location
