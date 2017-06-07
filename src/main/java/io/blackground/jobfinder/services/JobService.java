@@ -29,7 +29,7 @@ public class JobService {
 	 */
 	public JobService(JobRepository jobRepository) {
 		super();
-		this.jobRepository = jobRepositor;
+		this.jobRepository = jobRepository;
 	}
 
 	public List<Job> findAll() {
