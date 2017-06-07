@@ -41,7 +41,21 @@ public class Job {
     private int slots;
     private int jobid;
 
-    private Date published;
+    /**
+	 * @return the jobid
+	 */
+	public int getJobid() {
+		return jobid;
+	}
+
+	/**
+	 * @param jobid the jobid to set
+	 */
+	public void setJobid(int jobid) {
+		this.jobid = jobid;
+	}
+
+	private Date published;
     
     private Company company;
 
