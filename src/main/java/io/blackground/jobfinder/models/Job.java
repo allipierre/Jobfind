@@ -8,9 +8,6 @@ package io.blackground.jobfinder.models;
  *
  */
 
-import lombok.Getter;
-import lombok.Setter;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,13 +16,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import java.util.Date;
 
-@Getter
-@Setter
 @Entity
 public class Job {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
 	private String position;
@@ -37,12 +30,11 @@ public class Job {
 	private String minimumDegree;
 	private int slots;
 	private int companyid;
-	
+
 	private Date published;
 
 	private Company company;
-	
-	
+
 	/**
 	 * @return the companyid
 	 */
@@ -51,19 +43,18 @@ public class Job {
 	}
 
 	/**
-	 * @param companyid the companyid to set
+	 * @param companyid
+	 *            the companyid to set
 	 */
 	public void setCompanyid(int companyid) {
 		this.companyid = companyid;
 	}
 
-	
-
-	
-
 	/**
 	 * @return the id
 	 */
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	public long getId() {
 		return id;
 	}
