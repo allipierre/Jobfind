@@ -36,6 +36,16 @@ display:none;
     float:right;
 }
 
+.cancel{
+    background-color: rgb(255, 255, 255) !important;
+    border-color: rgb(167, 167, 167) !important;
+   color: rgb(0, 0, 0);
+}
+
+.cancel:hover{
+   color: rgb(0, 0, 0) !important;
+}
+
 .panel, .panel-heading {
     -webkit-border-radius: 0 !important;
     -moz-border-radius: 0 !important;
@@ -370,7 +380,7 @@ color: rgb(255, 255, 255) !important;
     </div>
   </div>
   
-  <input class="button-primary" type="submit" value="CANCEL">
+  <input class="cancel button-primary" type="submit" value="CANCEL">
   <input class="button-primary" type="submit" value="SAVE">
 </form>
 
