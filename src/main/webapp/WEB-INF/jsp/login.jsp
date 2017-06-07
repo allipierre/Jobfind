@@ -55,7 +55,7 @@ footer {
 color: rgb(255, 255, 255);
 }
 
-.lab{
+.lab
 color: rgb(255, 255, 255);
 }
 </style>
