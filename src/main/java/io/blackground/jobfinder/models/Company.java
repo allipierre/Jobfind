@@ -162,7 +162,7 @@ public class Company {
 	 * @return the industry
 	 */
 	@ManyToOne(optional = false)
-	@JoinColumn(name = "industryid", referencedColumnName = "industryid")
+	@JoinColumn(name = "industryid")
 	public Industry getIndustry() {
 		return industry;
 	}
