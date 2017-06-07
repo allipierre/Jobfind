@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="/static/css/normalize.css">
   <link rel="stylesheet" href="/static/css/skeleton.css">
   <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="icon" type="image/png" href="images/favicon.png">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
    <script type="json/javascript"  src="/static/js/file.js"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -36,6 +37,7 @@ footer {
 .nersr {
     max-width: 800px !important;
     padding-top: 150px !important;
+    padding-bottom: 40px !important;
 }
 
 .sern {
@@ -60,8 +62,6 @@ color: rgb(255, 255, 255);
 }
 </style>
 
- 
-  <link rel="icon" type="image/png" href="images/favicon.png">
 
 </head>
 <body>
