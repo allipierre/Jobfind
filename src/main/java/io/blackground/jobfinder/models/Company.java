@@ -40,7 +40,7 @@ public class Company {
 
 	private Industry industry;
 	private Countries countries;
-	private CompanySize companysize
+	private CompanySize companysize;
 	
 	private Set<Job> job;
 
