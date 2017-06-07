@@ -37,6 +37,12 @@ public class Job {
 	private String minimumDegree;
 	private int slots;
 	private int companyid;
+	
+	private Date published;
+
+	private Company company;
+	
+	
 	/**
 	 * @return the companyid
 	 */
@@ -51,9 +57,7 @@ public class Job {
 		this.companyid = companyid;
 	}
 
-	private Date published;
-
-	private Company company;
+	
 
 	
 
