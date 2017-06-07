@@ -34,7 +34,7 @@ public class IndustryService {
 
 	public List<Industry> findAll() {
 		List<Industry> industry = new ArrayList<>();
-		for (Industry industr : industryRepository.findAll()) {
+		for (Industry industr : industryRepository.findJoin()) {
 			industry.add(industr);
 		}
 		return industry;

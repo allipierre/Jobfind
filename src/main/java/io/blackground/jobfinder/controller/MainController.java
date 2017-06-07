@@ -53,6 +53,7 @@ public class MainController {
 	@GetMapping("/allejob")
 	public String alleJob(HttpServletRequest request) {
 		request.setAttribute("taskse", companyservice.findAll());
+		request.setAttribute("tasksen", industryService.findAll());
 		return "allejob";
 	}
 	
