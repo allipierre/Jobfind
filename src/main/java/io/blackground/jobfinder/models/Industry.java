@@ -62,7 +62,7 @@ public class Industry {
 	/**
 	 * @return the company
 	 */
-	@OneToMany(mappedBy = "industry", targetEntity = Company.class, fetch = FetchType.EAGER)
+	@OneToMany(mappedBy = "industry", targetEntity = Company.class, cascade = CascadeType.ALL)
 	public Set<Company> getCompany() {
 		return company;
 	}

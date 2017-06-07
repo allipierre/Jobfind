@@ -113,7 +113,7 @@ public class Company {
 	}
 
 	/**
-	 * @return the location
+	 * @return the industryid
 	 */
 	public int getIndustryid() {
 		return industryid;
