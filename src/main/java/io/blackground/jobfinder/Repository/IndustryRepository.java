@@ -18,6 +18,6 @@ import io.blackground.jobfinder.models.Industry;
  *
  */
 public interface IndustryRepository extends CrudRepository<Industry, Integer> {
-	@Query(value = "SELECT company_id,industry_name,company_name,website,about,city,location,industryid,numbere FROM Company join Industry on industryid=id", nativeQuery = true)
+	@Query(value = "SELECT industry_name,id FROM  Industry", nativeQuery = true)
 	public List<Industry> findJoin();
 }
