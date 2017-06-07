@@ -7,7 +7,7 @@
 <head>
 
   <meta charset="utf-8">
-  <title>All-Jobs</title>
+  <title>Login</title>
   <meta name="description" content="Website to help People">
   <meta name="author" content="Alli Pierre Yotti">
 
