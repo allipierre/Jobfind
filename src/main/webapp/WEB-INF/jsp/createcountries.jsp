@@ -305,7 +305,7 @@ color: rgb(255, 255, 255) !important;
   <div class="row">
     <div class="six columns">
       <label for="countryInput">Industry</label>
-      <input class="u-full-width" type="text" placeholder="Industry" id="industryInput" name="name" value="${Industry.industryName}">
+      <input class="u-full-width" type="text" placeholder="Industry" id="industryInput" name="industryName" value="${Industry.industryName}">
     </div>
   </div>
    <input class="button-primary" type="submit" value="SAVE Industry"> 
