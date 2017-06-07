@@ -52,6 +52,9 @@ footer {
     text-decoration: none;
     font-size: 2rem;
 }
+.bser{
+margin-top: 12px !important;
+}
 
 .hrt{
 color: rgb(255, 255, 255);
@@ -87,7 +90,7 @@ color: rgb(255, 255, 255);
 					type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
     </div>
   </div>
-  <input class="button-primary" type="button" value="Log In">
+  <input class="bser button-primary" type="button" value="Log In">
   <h4 class="text-center crt">
 					<a href="${contextPath}/registration">Create an account</a>
 	</h4>
