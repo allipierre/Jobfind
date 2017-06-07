@@ -278,7 +278,7 @@ color: rgb(255, 255, 255) !important;
   <div class="row">
     <div class="six columns">
       <label for="compnaneInput">Company Name</label>
-      <input class="u-full-width" type="text" placeholder="Company Name" id="compnaneInput" name="name"  value="${company.name}">
+      <input class="u-full-width" type="text" placeholder="Company Name" id="compnaneInput" name="name"  value="${company.companyName}">
     </div>
     <div class="six columns">
       <label for="countryInput">Country</label>
@@ -318,7 +318,7 @@ color: rgb(255, 255, 255) !important;
       <select class="u-full-width" id="industryInput">
       <option   disabled="disabled" selected="selected">Select the Company Industry</option>
         <c:forEach var="industry" items="${industry}">
-        <option  id="${company.industry}" value="${industry.id}">${industry.name}</option>
+        <option value="${industry.id}">${industry.industryName}</option>
          </c:forEach>
       </select>
     </div>

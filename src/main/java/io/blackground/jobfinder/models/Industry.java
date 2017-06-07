@@ -7,34 +7,25 @@ package io.blackground.jobfinder.models;
  * @author yotti
  *
  */
-import lombok.Getter;
-import lombok.Setter;
 
-import java.util.List;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
-import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
-
 
 @Entity
 public class Industry {
 
-	
-	private long ides;
-	
-	private String namens;
-	
-	
+	private long id;
+
+	private String industryName;
+
 	private Set<Company> company;
-	
 
 	/**
 	 * @return the id
@@ -42,47 +33,47 @@ public class Industry {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	public long getId() {
-		return ides;
+		return id;
 	}
 
 	/**
-	 * @param id the id to set
+	 * @param id
+	 *            the id to set
 	 */
 	public void setId(long id) {
-		this.ides = id;
+		this.id = id;
 	}
 
 	/**
 	 * @return the name
 	 */
-	public String getName() {
-		return namens;
+	public String getIndustryName() {
+		return industryName;
 	}
 
 	/**
-	 * @param name the name to set
+	 * @param name
+	 *            the name to set
 	 */
-	public void setName(String name) {
-		this.namens = name;
+	public void setIndustryName(String name) {
+		this.industryName = name;
 	}
 
 	/**
 	 * @return the company
 	 */
-	@OneToMany(mappedBy = "industry", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "industry", targetEntity = Industry.class, fetch = FetchType.EAGER)
 	public Set<Company> getCompany() {
 		return company;
 	}
 
 	/**
-	 * @param company the company to set
+	 * @param company
+	 *            the company to set
 	 */
-	
+
 	public void setCompany(Set<Company> company) {
 		this.company = company;
 	}
-	
-	
-	
 
 }

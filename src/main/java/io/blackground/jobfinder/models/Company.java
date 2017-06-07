@@ -17,32 +17,17 @@ import javax.persistence.ManyToOne;
 import javax.persistence.NamedNativeQuery;
 
 @Entity
-@NamedNativeQuery(name = "Company.findByidIs", query = "SELECT id,name,website,about,city,location,industry_id,numbere FROM Company t", resultClass = Company.class)
+@NamedNativeQuery(name = "Company.findByidIs", query = "SELECT companyId,companyName,website,about,city,location,industry_id,numbere FROM Company t", resultClass = Company.class)
 public class Company {
 
-	private long id;
+	private long companyId;
 
-	private String name;
+	private String companyName;
 	private String website;
 	private String about;
 	private String city;
 	private int location;
-	private int industry_id;
-	
-
-	/**
-	 * @return the industry_id
-	 */
-	public int getIndustry_id() {
-		return industry_id;
-	}
-
-	/**
-	 * @param industry_id the industry_id to set
-	 */
-	public void setIndustry_id(int industry_id) {
-		this.industry_id = industry_id;
-	}
+	private int industryid;
 
 	private int numbere;
 
@@ -53,31 +38,31 @@ public class Company {
 	 */
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	public long getId() {
-		return id;
+	public long getCompanyId() {
+		return companyId;
 	}
 
 	/**
 	 * @param id
 	 *            the id to set
 	 */
-	public void setId(long id) {
-		this.id = id;
+	public void setCompanyId(long id) {
+		this.companyId = id;
 	}
 
 	/**
 	 * @return the name
 	 */
-	public String getName() {
-		return name;
+	public String getCompanyName() {
+		return companyName;
 	}
 
 	/**
 	 * @param name
 	 *            the name to set
 	 */
-	public void setName(String name) {
-		this.name = name;
+	public void setCompanyName(String name) {
+		this.companyName = name;
 	}
 
 	/**
@@ -128,8 +113,12 @@ public class Company {
 	/**
 	 * @return the location
 	 */
-	public int getLocation() {
-		return location;
+	public int getIndustryid() {
+		return industryid;
+	}
+
+	public void setIndustryId(int industryid) {
+		this.industryid = industryid;
 	}
 
 	/**
@@ -143,13 +132,14 @@ public class Company {
 	/**
 	 * @return the industry_id
 	 */
-	
+	public int getLocation() {
+		return location;
+	}
 
 	/**
 	 * @param industry_id
 	 *            the industry_id to set
 	 */
-	
 
 	/**
 	 * @return the numbere
@@ -169,8 +159,8 @@ public class Company {
 	/**
 	 * @return the industry
 	 */
-	@ManyToOne
-	@JoinColumn(name = "industry_id",insertable = false, updatable = false)
+	@ManyToOne(optional = false)
+	@JoinColumn(name = "industryid", referencedColumnName = "industryid")
 	public Industry getIndustry() {
 		return industry;
 	}

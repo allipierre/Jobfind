@@ -295,22 +295,22 @@ color: rgb(255, 255, 255) !important;
 			<c:forEach var="task" items="${taskse}">
 			<div class="panel panel-light-content hidden-xs hidden-sm " data-automation="jobseeker-jobs">
         <div class="panel-heading">
-            <small class="text-muted"> ${task.name}</small>
-            <p class="headline3"><strong><a href="/en/employer/groupe-agri-revolution/recherche-dun-technicien-agricole.html">${task.name} </a></strong> <small>(Full time)</small></p>
+            <small class="text-muted"> ${task.companyName}</small>
+            <p class="headline3"><strong><a href="/en/employer/groupe-agri-revolution/recherche-dun-technicien-agricole.html">${task.companyName} </a></strong> <small>(Full time)</small></p>
         </div>
         <div class="panel-footer clearfix">
             <ul class="list-inline">
                 <li class="panel-footer-icon-wrapper">
                     <i class="icon icon-dot-circled"></i>
                     <a href="/en/employer/groupe-agri-revolution.html" target="_blank" class="js-company-name">
-                        ${task.id}                    </a>
+                        ${task.companyId}                    </a>
                 </li>
 
                                                     <li class="panel-footer-icon-wrapper">
                         <i class="icon icon-location"></i>${task.location}         </li>
                 
                 <li class="panel-footer-icon-wrapper">
-                    <i class="icon icon-bookmark"></i>${task.industry_id}  </li>
+                    <i class="icon icon-bookmark"></i>${task.companyId}  </li>
                 <li class="pull-right">
                     <a href="/en/employer/groupe-agri-revolution/recherche-dun-technicien-agricole.html" class="btn btn-info pull-right icon-eye" ><span class=" fa fa fa-eye"></span> View Job</a>
                 </li>
