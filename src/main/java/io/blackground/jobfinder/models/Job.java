@@ -26,38 +26,36 @@ public class Job {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+	private long id;
 
-  
 	private String position;
 
-   
+	private String description;
+	private int minimumExperienceYears;
+	private String category;
 
-    private String description;
-    private int minimumExperienceYears;
-    private String category;
-
-    private String minimumDegree;
-    private int slots;
-    private int jobid;
-
-    /**
-	 * @return the jobid
+	private String minimumDegree;
+	private int slots;
+	private int companyid;
+	/**
+	 * @return the companyid
 	 */
-	public int getJobid() {
-		return jobid;
+	public int getCompanyid() {
+		return companyid;
 	}
 
 	/**
-	 * @param jobid the jobid to set
+	 * @param companyid the companyid to set
 	 */
-	public void setJobid(int jobid) {
-		this.jobid = jobid;
+	public void setCompanyid(int companyid) {
+		this.companyid = companyid;
 	}
 
 	private Date published;
-    
-    private Company company;
+
+	private Company company;
+
+	
 
 	/**
 	 * @return the id
@@ -67,7 +65,8 @@ public class Job {
 	}
 
 	/**
-	 * @param id the id to set
+	 * @param id
+	 *            the id to set
 	 */
 	public void setId(long id) {
 		this.id = id;
@@ -81,7 +80,8 @@ public class Job {
 	}
 
 	/**
-	 * @param position the position to set
+	 * @param position
+	 *            the position to set
 	 */
 	public void setPosition(String position) {
 		this.position = position;
@@ -95,7 +95,8 @@ public class Job {
 	}
 
 	/**
-	 * @param description the description to set
+	 * @param description
+	 *            the description to set
 	 */
 	public void setDescription(String description) {
 		this.description = description;
@@ -109,7 +110,8 @@ public class Job {
 	}
 
 	/**
-	 * @param minimumExperienceYears the minimumExperienceYears to set
+	 * @param minimumExperienceYears
+	 *            the minimumExperienceYears to set
 	 */
 	public void setMinimumExperienceYears(int minimumExperienceYears) {
 		this.minimumExperienceYears = minimumExperienceYears;
@@ -123,7 +125,8 @@ public class Job {
 	}
 
 	/**
-	 * @param category the category to set
+	 * @param category
+	 *            the category to set
 	 */
 	public void setCategory(String category) {
 		this.category = category;
@@ -137,7 +140,8 @@ public class Job {
 	}
 
 	/**
-	 * @param minimumDegree the minimumDegree to set
+	 * @param minimumDegree
+	 *            the minimumDegree to set
 	 */
 	public void setMinimumDegree(String minimumDegree) {
 		this.minimumDegree = minimumDegree;
@@ -151,7 +155,8 @@ public class Job {
 	}
 
 	/**
-	 * @param slots the slots to set
+	 * @param slots
+	 *            the slots to set
 	 */
 	public void setSlots(int slots) {
 		this.slots = slots;
@@ -165,7 +170,8 @@ public class Job {
 	}
 
 	/**
-	 * @param published the published to set
+	 * @param published
+	 *            the published to set
 	 */
 	public void setPublished(Date published) {
 		this.published = published;
@@ -174,20 +180,19 @@ public class Job {
 	/**
 	 * @return the company
 	 */
-	
+
 	@ManyToOne(optional = false)
-	@JoinColumn(name = "jobid", referencedColumnName = "companyId",insertable=false,updatable=false)
+	@JoinColumn(name = "companyid", referencedColumnName = "companyId", insertable = false, updatable = false)
 	public Company getCompany() {
 		return company;
 	}
 
 	/**
-	 * @param company the company to set
+	 * @param company
+	 *            the company to set
 	 */
 	public void setCompany(Company company) {
 		this.company = company;
 	}
-    
-    
 
 }
