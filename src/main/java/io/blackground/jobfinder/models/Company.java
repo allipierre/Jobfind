@@ -14,10 +14,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.NamedNativeQuery;
 
-@Entity
+
+
+
 //@NamedNativeQuery(name = "Company.findByidIs", query = "SELECT companyId,companyName,website,about,city,location,industry_id,numbere FROM Company t", resultClass = Company.class)
+@Entity
 public class Company {
 
 	private long companyId;
