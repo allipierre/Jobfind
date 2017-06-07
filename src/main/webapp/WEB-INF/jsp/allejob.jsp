@@ -299,7 +299,7 @@ aa {
 				<div class="panel-heading">
 					<small class="text-muted"> ${task.companyName}</small>
 					<c:forEach var="taskes" items="${tasksen}">
-						<c:if test="${taskes.id}=${task.companyId}">
+						<c:if test="${taskes.id == task.companyId}">
 							<p class="headline3">
 								<strong><a
 									href="/en/employer/groupe-agri-revolution/recherche-dun-technicien-agricole.html">${taskes.industryName}
