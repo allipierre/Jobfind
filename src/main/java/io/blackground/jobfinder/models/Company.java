@@ -30,6 +30,28 @@ public class Company {
 	private String city;
 	private int location;
 	private int industryid;
+	
+	private int numbere;
+
+	private Industry industry;
+	private Countries countries;
+
+	/**
+	 * @return the countries
+	 */
+	
+	@ManyToOne(optional = false)
+	@JoinColumn(name = "location", referencedColumnName = "id",insertable=false,updatable=false)
+	public Countries getCountries() {
+		return countries;
+	}
+
+	/**
+	 * @param countries the countries to set
+	 */
+	public void setCountries(Countries countries) {
+		this.countries = countries;
+	}
 
 	/**
 	 * @return the industryid
@@ -45,9 +67,7 @@ public class Company {
 		this.industryid = industryid;
 	}
 
-	private int numbere;
-
-	private Industry industry;
+	
 
 	/**
 	 * @return the id
