@@ -328,49 +328,6 @@ color: rgb(255, 255, 255) !important;
 </body>
 
 
-  <footer>
-      <!-- Pre-footer -->
-      <div class="prefooter">
-        <div class="container">
-          <div class="row">
-            <div class="one-third column">
-            <img src="https://www.tryfoexnow.com/c/foex-site/2015/images/foex_logo_light.png" class="img-responsive"  width="80%" height="80%">
-              <p class="ewf">We specialize in creating powerful <br>plugins that enhance Oracle APEX.</p>
-              <p class="ewf" >Our low-code Enterprise Rapid <br>Application Development solution <br>enables anyone with basic PL/SQL knowledge to built large-scale web applications declaratively.</p>
-            </div>
-
-            <div class="one-third column">
-              <h6 class="prefooter-header">Browse Products</h6>
-              <ul>
-                <li><a href="#">Database</a></li>
-                <li><a href="#" target="_blank">Graphic design</a></li>
-                <li><a href="#" target="_blank">Software Development</a></li>
-                <li><a href="#" target="_blank">Hardware Development</a></li>
-                  <li><a href="#" target="_blank">Hardware Development</a></li>
-                    <li><a href="#" target="_blank">Hardware Development</a></li>
-                      <li><a href="#" target="_blank">Hardware Development</a></li>
-              </ul>
-            </div>
-
-            <div class="one-third column">
-              <h6 class="prefooter-header">Help and Support</h6>
-              <ul>
-                <li><a href="#">Graphic design</a></li>
-                <li><a href="#" target="_blank">Obtaining my software</a></li>
-                <li><a href="#" target="_blank">Renewing my support service renewal</a></li>
-                <li><a href="#" target="_blank">Reviewing my support service renewal</a></li>
-                  <li><a href="#" target="_blank">Hardware Development</a></li>
-                    <li><a href="#" target="_blank">Hardware Development</a></li>
-                      <li><a href="#" target="_blank">Hardware Development</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-</body>
-
-
   <%@ include file = "footer.jsp" %>
 
 
