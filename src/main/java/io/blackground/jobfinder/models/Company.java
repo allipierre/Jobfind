@@ -14,6 +14,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Transient;
 
 
 
@@ -29,6 +30,7 @@ public class Company {
 	private String about;
 	private String city;
 	private int location;
+	 @Transient
 	private int industryid;
 
 	private int numbere;
