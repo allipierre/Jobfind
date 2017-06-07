@@ -35,21 +35,21 @@ public class Company {
 
 	private Industry industry;
 	private Countries countries;
-	private Countries companysize;
+	private CompanySize companysize;
 
 	/**
 	 * @return the companysize
 	 */
 	@ManyToOne(optional = false)
 	@JoinColumn(name = "numbere", referencedColumnName = "id",insertable=false,updatable=false)
-	public Countries getCompanysize() {
+	public CompanySize getCompanysize() {
 		return companysize;
 	}
 
 	/**
 	 * @param companysize the companysize to set
 	 */
-	public void setCompanysize(Countries companysize) {
+	public void setCompanysize(CompanySize companysize) {
 		this.companysize = companysize;
 	}
 
