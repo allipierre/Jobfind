@@ -50,7 +50,7 @@ public class CompanySize {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	public long getId() {
-		return id;
+		return id
 	}
 
 	/**
