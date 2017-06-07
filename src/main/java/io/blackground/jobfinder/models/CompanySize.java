@@ -3,14 +3,14 @@
  */
 package io.blackground.jobfinder.models;
 
+import java.util.Set;
+
+import javax.persistence.CascadeType;
+
 /**
  * @author yotti
  *
  */
-import lombok.Getter;
-import lombok.Setter;
-
-import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -18,20 +18,61 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-@Getter
-@Setter
+
+
 @Entity
 public class CompanySize {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	
 	private long id;
 
 	private String value;
-	
-	
-	@OneToMany( targetEntity=Company.class )
-    private List companyList;
+	private Set<Company> company;
+
+	/**
+	 * @return the company
+	 */
+	@OneToMany(mappedBy = "companysize", targetEntity = Company.class, cascade = CascadeType.ALL)
+	public Set<Company> getCompany() {
+		return company;
+	}
+
+	/**
+	 * @param company the company to set
+	 */
+	public void setCompany(Set<Company> company) {
+		this.company = company;
+	}
+
+	/**
+	 * @return the id
+	 */
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	public long getId() {
+		return id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	/**
+	 * @return the value
+	 */
+	public String getValue() {
+		return value;
+	}
+
+	/**
+	 * @param value the value to set
+	 */
+	public void setValue(String value) {
+		this.value = value;
+	}
 	
 
 }
