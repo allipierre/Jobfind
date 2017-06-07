@@ -106,26 +106,5 @@ color: rgb(255, 255, 255);
   <%@ include file = "footer.jsp" %>
 
 
-
-
-
-<script>
-$(function(){
-$("#header").load("header.html");
-});
-document.addEventListener("DOMContentLoaded", function(){
-	Typed.new(".price", {
-		strings: ["GHC 500", "<strong>GHC 299</strong>"],
-		typeSpeed: 1,
-		loop: true
-	});
-});
-
-$( "#industryInput" ).change(function() {  $( "#companyIndustry").val($(this).val()); });
-$( "#countryInput" ).change(function() {  $( "#companyLocation").val($(this).val()); });
-$( "#sizeInput" ).change(function() {  $( "#companySize").val($(this).val()); });
-
-</script>
  <script type="text/javascript"  src="/static/js/file.js"></script>
- <script type="text/javascript"  src="/static/js/typed.js"></script>
  </html>
