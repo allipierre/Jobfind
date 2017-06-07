@@ -33,7 +33,7 @@ footer {
     margin-top: 0rem !important;
 }
 
-.ner {
+.nersr {
     max-width: 800px !important;
     padding-top: 150px !important;
 }
@@ -44,15 +44,6 @@ footer {
 		center no-repeat fixed;
 	background-size: cover;
 }
-
-
-
-
-
-
-
-
-
 
 .crt a {
     color: rgb(30, 174, 219);
@@ -78,7 +69,7 @@ color: rgb(255, 255, 255);
     
   
 <div class="sern">
-    <div class="container ner">
+    <div class="container nersr">
   <form method="POST" action="${contextPath}/login" class="form-signin">
     <h2 class="form-heading hrt">Log in</h2>
     <div class="form-group ${error != null ? 'has-error' : ''}">
@@ -92,7 +83,7 @@ color: rgb(255, 255, 255);
   <div class="row">
     <div class="six columns">
       <label class="lab" for="exampleEmailInput">Password</label>
-      <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput"> <span>${error}</span> <input
+      <input class="u-full-width" type="text" placeholder="Password" id="exampleEmailInput"> <span>${error}</span> <input
 					type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
     </div>
   </div>
