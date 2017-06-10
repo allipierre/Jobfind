@@ -26,7 +26,7 @@
 <link rel="icon" type="image/png" href="images/favicon.png">
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
 
-
+</head>
 <style>
 footer {
 	margin-top: 0rem !important;
@@ -65,7 +65,7 @@ footer {
 </style>
 
 
-</head>
+
 <body>
 	<%@ include file="header.jsp"%>
 

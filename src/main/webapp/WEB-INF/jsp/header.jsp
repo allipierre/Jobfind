@@ -27,7 +27,7 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="/static/js/site.js"></script>
 
-
+</head>
 <style>
 html {
 	background: rgba(182, 184, 187, 0.22) !important;
@@ -93,7 +93,7 @@ aa {
 
 <link rel="icon" type="image/png" href="images/favicon.png">
 
-</head>
+
 <body>
 	<nav class="navbar">
 		<div class="container">
