@@ -19,6 +19,12 @@
 
 <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
+<link
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	rel="stylesheet">
+<link
+	href="https://github.com/hellokoding/registration-login-spring-hsql/blob/master/src/main/webapp/resources/css/common.css"
+	rel="stylesheet">
 
 <link rel="stylesheet" href="/static/css/normalize.css">
 <link rel="stylesheet" href="/static/css/skeleton.css">
@@ -70,40 +76,32 @@ footer {
 	<%@ include file="header.jsp"%>
 
 
-	<div class="sern">
-		<div class="container nersr">
-			<form method="POST" action="${contextPath}/login" class="form-signin">
-				<h2 class="form-heading hrt">Log in</h2>
-				<div class="form-group ${error != null ? 'has-error' : ''}">
-					<div class="row">
-						<div class="six columns">
-							<label class="lab" for="exampleEmailInput">Email</label> <span>${message}</span>
-							<input class="u-full-width" type="email"
-								placeholder="test@mailbox.com" id="exampleEmailInput" autofocus="true">
-						</div>
-					</div>
+	<div class="container">
 
-					<div class="row">
-						<div class="six columns">
-							<label class="lab" for="exampleEmailInput">Password</label> <input
-								class="u-full-width" type="password" placeholder="Password"
-								id="exampleEmailInput"> <span>${error}</span> <input
-								type="hidden" name="${_csrf.parameterName}"
-								value="${_csrf.token}" />
-						</div>
-					</div>
-					<input class="bser button-primary" type="button" value="Log In">
-					<h4 class="text-center crt">
-						<a href="${contextPath}/registration">Create an account</a>
-					</h4>
-				</div>
-			</form>
+		<form method="POST" action="${contextPath}/login" class="form-signin">
+			<h2 class="form-heading">Log in</h2>
 
+			<div class="form-group ${error != null ? 'has-error' : ''}">
+				<span>${message}</span> <input name="username" type="text"
+					class="form-control" placeholder="Username" autofocus="true" /> <input
+					name="password" type="password" class="form-control"
+					placeholder="Password" /> <span>${error}</span> <input
+					type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 
-		</div>
+				<input class="bser button-primary" type="button" value="Log In">
+				<h4 class="text-center">
+					<a href="${contextPath}/registration">Create an account</a>
+				</h4>
+			</div>
+
+		</form>
+
 	</div>
-
-
+	<!-- /container -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </body>
 
