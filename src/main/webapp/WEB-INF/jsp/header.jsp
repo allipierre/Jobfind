@@ -130,26 +130,9 @@ aa {
 							</li>
 						</ul>
 					</div></li>
-					<li class="dropdown"><a href="#" class="dropdown-toggle"
-						data-toggle="dropdown" role="button" aria-expanded="false"> <span
-							class="glyphicon glyphicon-user">&nbsp;</span>${pageContext.request.userPrincipal.name}<span
-							class="caret"></span>
-						
-					</a>
-					
-
-						<ul class="dropdown-menu" role="menu">
-							<li><a onclick="document.forms['logoutForm'].submit()">Logout</a>
-
-
-							</li>
-						</ul></li>
-						<c:if test="${pageContext.request.userPrincipal.name != null}">
-					<form id="logoutForm" method="POST" action="${contextPath}/logout">
-						<input type="hidden" name="${_csrf.parameterName}"
-							value="${_csrf.token}" />
-					</form>
-				</c:if>
+					<li class="navbar-item"><a class="navbar-link" href="#"
+					data-popover="#moreNavPopover">Logout</a>
+					</li>
 			</ul>
 		</div>
 	</nav>
