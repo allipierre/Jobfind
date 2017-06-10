@@ -72,13 +72,13 @@ footer {
 
 	<div class="sern">
 		<div class="container nersr">
-			<form method="POST" action="login" class="form-signin">
+			<form method="POST" action="${contextPath}/login" class="form-signin">
 				<h2 class="form-heading hrt">Log in</h2>
 				<div class="form-group ${error != null ? 'has-error' : ''}">
 					<div class="row">
 						<div class="six columns">
 							<label class="lab" for="exampleEmailInput">Email</label> <span>${message}</span>
-							<input class="u-full-width" type="text"
+							<input class="u-full-width" type="text"  name="username"
 								placeholder="test@mailbox.com" id="exampleEmailInput" autofocus="true">
 						</div>
 					</div>
@@ -86,7 +86,7 @@ footer {
 					<div class="row">
 						<div class="six columns">
 							<label class="lab" for="exampleEmailInput">Password</label> <input
-								class="u-full-width" type="password" placeholder="Password"
+								class="u-full-width" type="password" name="password" placeholder="Password"
 								id="exampleEmailInput"> <span>${error}</span> <input
 								type="hidden" name="${_csrf.parameterName}"
 								value="${_csrf.token}" />
