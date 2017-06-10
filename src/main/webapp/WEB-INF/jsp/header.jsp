@@ -90,7 +90,7 @@ aa {
 <body>
 	<nav class="navbar">
 		<div class="container">
-			<div class="two columns twoc">
+			<div class="four columns twoc">
 				<a href="/"><img
 					src="/static/images/blackground_jobs-01.png"
 					class="u-max-full-width"></a>
