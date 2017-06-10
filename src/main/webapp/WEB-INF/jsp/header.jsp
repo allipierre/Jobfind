@@ -54,8 +54,6 @@ aa {
 	float: right !important;
 }
 
-
-
 .one.column {
 	padding-top: 23px;
 }
@@ -83,10 +81,6 @@ aa {
 	background-color: red !important;
 	border-color: red !important;
 }
-
-
-
-
 </style>
 
 
@@ -120,31 +114,24 @@ aa {
 					data-popover="#moreNavPopover">Employees</a>
 					<div id="moreNavPopover" class="popover">
 						<ul class="popover-list">
-							<li class="popover-item"><a class="popover-link" href="createcompagny">Create
-									profile</a></li>
+							<li class="popover-item"><a class="popover-link"
+								href="createcompagny">Create profile</a></li>
 							<li class="popover-item"><a class="popover-link" href="post">Post
 									a Job</a></li>
-							<li class="popover-item"><a class="popover-link" href="login">Login</a>
-							</li>
-							<li class="popover-item"><a class="popover-link" href="createcountries">Admin</a>
-							</li>
+							<li class="popover-item"><a class="popover-link"
+								href="login">Login</a></li>
+							<li class="popover-item"><a class="popover-link"
+								href="createcountries">Admin</a></li>
 						</ul>
 					</div></li>
-					<li class="navbar-item"><a class="navbar-link" href="#"
-					data-popover="#moreNavPopover"><span
-							class="glyphicon glyphicon-user">&nbsp;</span>${pageContext.request.userPrincipal.name}<span
-							class="caret"></span>
-						
-					</a>
-					
-
-						<ul class="dropdown-menu" role="menu">
-							<li><a onclick="document.forms['logoutForm'].submit()">Logout</a>
-
-
-							</li>
+				<li class="navbar-item"><a class="navbar-link" href="#"
+					data-popover="#moreNavPopover">${pageContext.request.userPrincipal.name}</a>
+					<div id="moreNavPopover" class="popover">
+						<ul class="popover-list">
+							<li class="popover-item"><a class="popover-link"
+								onclick="document.forms['logoutForm'].submit()">Logout</a></li>
 						</ul>
-					</li>
+					</div></li>
 					<c:if test="${pageContext.request.userPrincipal.name != null}">
 					<form id="logoutForm" method="POST" action="${contextPath}/logout">
 						<input type="hidden" name="${_csrf.parameterName}"
