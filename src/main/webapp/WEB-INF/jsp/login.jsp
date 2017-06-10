@@ -17,21 +17,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600"
-	rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
 
 <link rel="stylesheet" href="/static/css/normalize.css">
 <link rel="stylesheet" href="/static/css/skeleton.css">
 <link rel="stylesheet" href="/static/css/style.css">
 <link rel="icon" type="image/png" href="images/favicon.png">
-<link
-	href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
-	rel="stylesheet">
-<script type="json/javascript" src="/static/js/file.js"></script>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="/static/js/site.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
 
 
 <style>
@@ -116,7 +109,7 @@ footer {
 
 
 <%@ include file="footer.jsp"%>
-
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="/static/js/site.js"></script>
 <script type="text/javascript" src="/static/js/file.js"></script>
 </html>
