@@ -45,10 +45,10 @@ public class MainController {
 	@Autowired
 	private IndustryService industryService;
 
-	@GetMapping("/")
-	public String hello() {
-		return "index";
-	}
+//	@GetMapping("/")
+//	public String hello() {
+//		return "index";
+//	}
 	
 	@GetMapping("/allejob")
 	public String alleJob(HttpServletRequest request) {
