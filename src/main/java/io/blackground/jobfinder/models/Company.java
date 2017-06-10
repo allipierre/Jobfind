@@ -19,6 +19,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 
 
@@ -35,13 +36,31 @@ public class Company {
 	private String city;
 	private int location;
 	private int industryid;
+	private long userid;
 	
 	private int numbere;
 
 	private Industry industry;
 	private Countries countries;
 	private CompanySize companysize;
+	private User user; 
 	
+	/**
+	 * @return the user
+	 */
+	@OneToOne(optional=false)
+    @JoinColumn(name = "userid") 
+	public User getUser() {
+		return user;
+	}
+
+	/**
+	 * @param user the user to set
+	 */
+	public void setUser(User user) {
+		this.user = user;
+	}
+
 	private Set<Job> job;
 
 	/**
