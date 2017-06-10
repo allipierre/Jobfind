@@ -12,12 +12,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import io.blackground.jobfinder.Repository.UserService;
 import io.blackground.jobfinder.models.Industry;
 import io.blackground.jobfinder.services.CompanyService;
 import io.blackground.jobfinder.services.CompanySizeService;
 import io.blackground.jobfinder.services.CountriesService;
 import io.blackground.jobfinder.services.IndustryService;
 import io.blackground.jobfinder.services.JobService;
+import io.blackground.jobfinder.services.UserServiceImpl;
 
 
 
@@ -44,6 +46,10 @@ public class MainController {
 	
 	@Autowired
 	private IndustryService industryService;
+	
+	
+	 @Autowired
+	    private UserServiceImpl userService;
 
 //	@GetMapping("/")
 //	public String hello() {
@@ -63,6 +69,7 @@ public class MainController {
 		request.setAttribute("countries", countriesservice.findAll());
 		request.setAttribute("companySize", companySizesservice.findAll());
 		request.setAttribute("industry", list);
+		request.setAttribute("users", userService.findAll());
 		return "createcompagny";
 	}
 	

@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import io.blackground.jobfinder.Repository.UserService;
 import io.blackground.jobfinder.models.User;
 import io.blackground.jobfinder.services.SecurityService;
-import io.blackground.jobfinder.services.UserService;
 import io.blackground.jobfinder.services.UserValidator;
 
 /**

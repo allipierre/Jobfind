@@ -282,14 +282,14 @@ color: rgb(255, 255, 255) !important;
 <div class="container">
 
 <form method="POST" action="save-company">
-
+<c:forEach var="user" items="${users}">
 <div class="row">
     <div class="six columns">
       <label for="usernameInput">Email Adresse</label>
-      <input class="u-full-width" type="text" placeholder="Email Adresse" id="usernameInput" name="username"  value="${pageContext.request.userPrincipal.name}">
+      <input class="u-full-width" type="text" placeholder="Email Adresse" id="usernameInput" name="username"  value="${user.username}">
     </div>
   </div>
-
+</c:forEach>
 
 
 

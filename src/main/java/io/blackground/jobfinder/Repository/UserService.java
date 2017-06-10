@@ -1,7 +1,7 @@
 /**
  * 
  */
-package io.blackground.jobfinder.services;
+package io.blackground.jobfinder.Repository;
 
 import io.blackground.jobfinder.models.User;
 
