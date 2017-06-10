@@ -28,6 +28,13 @@
 
 
 <style>
+#usernameInput{
+background: rgb(47, 171, 77) !important;
+    color: rgb(255, 255, 255) !important;
+    font-size: 2rem !important;
+    font-weight: bold !important;
+}
+
 #companyIndustry,#companyLocation,#companySize{
 display:none;
 }
@@ -387,7 +394,7 @@ document.addEventListener("DOMContentLoaded", function(){
 $( "#industryInput" ).change(function() {  $( "#companyIndustry").val($(this).val()); });
 $( "#countryInput" ).change(function() {  $( "#companyLocation").val($(this).val()); });
 $( "#sizeInput" ).change(function() {  $( "#companySize").val($(this).val()); });
-
+$("#usernameInput").prop( "disabled", true );
 </script>
  <script type="text/javascript"  src="/static/js/file.js"></script>
  <script type="text/javascript"  src="/static/js/typed.js"></script>
