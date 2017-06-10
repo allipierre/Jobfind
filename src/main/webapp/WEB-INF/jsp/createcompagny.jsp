@@ -275,6 +275,18 @@ color: rgb(255, 255, 255) !important;
 <div class="container">
 
 <form method="POST" action="save-company">
+
+<div class="row">
+    <div class="six columns">
+      <label for="usernameInput">Email Adresse</label>
+      <input class="u-full-width" type="text" placeholder="Email Adresse" id="usernameInput" name="username"  value="${user.username}">
+    </div>
+  </div>
+
+
+
+
+
   <div class="row">
     <div class="six columns">
       <label for="compnaneInput">Company Name</label>
