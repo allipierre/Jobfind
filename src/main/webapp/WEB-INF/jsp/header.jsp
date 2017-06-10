@@ -22,7 +22,6 @@
 <link
 	href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
 	rel="stylesheet">
-<script type="json/javascript" src="/static/js/file.js"></script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="/static/js/site.js"></script>
@@ -171,5 +170,5 @@ aa {
 
 
 <script type="text/javascript" src="/static/js/file.js"></script>
-<script type="text/javascript" src="/static/js/typed.js"></script>
+
 </html>
