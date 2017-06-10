@@ -125,8 +125,8 @@ aa {
 						</ul>
 					</div></li>
 				<li class="navbar-item"><a class="navbar-link" href="#"
-					data-popover="#moreNavPopover">${pageContext.request.userPrincipal.name}</a>
-					<div id="moreNavPopover" class="popover">
+					data-popover="#moreNavPopovere">${pageContext.request.userPrincipal.name}</a>
+					<div id="moreNavPopovere" class="popover">
 						<ul class="popover-list">
 							<li class="popover-item"><a class="popover-link"
 								onclick="document.forms['logoutForm'].submit()">Logout</a></li>
