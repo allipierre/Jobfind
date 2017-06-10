@@ -30,9 +30,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests().antMatchers("/static/css/**", "/static/js/**").permitAll()
 		.antMatchers("/static/images/**").permitAll()
-				.antMatchers("/resources/**", "/registration","/index").permitAll().anyRequest().authenticated().and()
-				.formLogin().loginPage("/login").permitAll().and().logout().permitAll();
+				.antMatchers("/resources/**", "/registration").permitAll().anyRequest().authenticated().and()
+				.formLogin().loginPage("/login").permitAll().and().csrf().ignoringAntMatchers("/index").and().logout().permitAll();
 	}
+	
+	
 
 	
 	@Autowired
