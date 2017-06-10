@@ -11,6 +11,6 @@ import io.blackground.jobfinder.models.User;
  * @author yotti
  *
  */
-public interface UserRepository extends JpaRepository<User, Long> {
+public interface UseRepository extends JpaRepository<User, Long> {
     User findByUsername(String username);
 }
