@@ -32,7 +32,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.//csrf().disable()
                 authorizeRequests()
-                    .antMatchers("/resources/**", "/registration","/login","/header","https://jobfind-master.herokuapp.com/static/js/site.js").permitAll()
+                    .antMatchers("/css/**", "/js/**").permitAll()
+                    .antMatchers("/resources/**", "/registration").permitAll()
                     .anyRequest().authenticated()
                     .and()
                 .formLogin()
