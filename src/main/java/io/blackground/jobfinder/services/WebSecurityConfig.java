@@ -34,10 +34,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.formLogin().loginPage("/login").permitAll().and().csrf().ignoringAntMatchers("/").and().logout().permitAll();
 	}
 	
-	@Override
-	public void configure(WebSecurity web) throws Exception {
-	    web.ignoring().antMatchers("/");
-	}
+	
 
 	
 	@Autowired

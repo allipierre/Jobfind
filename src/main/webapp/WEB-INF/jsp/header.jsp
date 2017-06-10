@@ -92,7 +92,7 @@ aa {
 		<div class="container">
 			<div class="two columns twoc">
 				<a href="/"><img
-					src="https://www.tryfoexnow.com/c/foex-site/2015/images/foex-logo.png"
+					src="/static/images/blackground_jobs-01.png"
 					class="u-max-full-width"></a>
 			</div>
 			<ul class="navbar-list" id="pana">
