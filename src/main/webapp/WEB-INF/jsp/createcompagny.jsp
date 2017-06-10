@@ -279,7 +279,7 @@ color: rgb(255, 255, 255) !important;
 <div class="row">
     <div class="six columns">
       <label for="usernameInput">Email Adresse</label>
-      <input class="u-full-width" type="text" placeholder="Email Adresse" id="usernameInput" name="username"  value="${user.username}">
+      <input class="u-full-width" type="text" placeholder="Email Adresse" id="usernameInput" name="username"  value="${pageContext.request.userPrincipal.name}">
     </div>
   </div>
 
