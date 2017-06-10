@@ -28,13 +28,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests().antMatchers("/static/css/**", "/static/js/**").permitAll()
+		http.authorizeRequests().antMatchers("/static/css/**", "/static/js/**","/","index").permitAll()
 		.antMatchers("/static/images/**").permitAll()
 				.antMatchers("/resources/**", "/registration").permitAll().anyRequest().authenticated().and()
-				.formLogin().loginPage("/login").permitAll().and().csrf().ignoringAntMatchers("/index").and().logout().permitAll();
+				.formLogin().loginPage("/login").permitAll().and().csrf().ignoringAntMatchers("/").and().logout().permitAll();
 	}
 	
-	
+	@Override
+	public void configure(WebSecurity web) throws Exception {
+	    web.ignoring().antMatchers("/");
+	}
 
 	
 	@Autowired
