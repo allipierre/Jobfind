@@ -1,7 +1,7 @@
-/**
- * 
- */
 package io.blackground.jobfinder.services;
+
+
+
 
 /**
  * @author yotti
@@ -30,8 +30,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http
-                .authorizeRequests()
+        http.//csrf().disable()
+                authorizeRequests()
                     .antMatchers("/resources/**", "/registration").permitAll()
                     .anyRequest().authenticated()
                     .and()
