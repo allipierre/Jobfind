@@ -32,7 +32,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.//csrf().disable()
                 authorizeRequests()
-                    .antMatchers("/resources/**", "/registration").permitAll()
+                    .antMatchers("/resources/**", "/registration","/jobfind-master/src/main/webapp/static/js/**").permitAll()
                     .anyRequest().authenticated()
                     .and()
                 .formLogin()
