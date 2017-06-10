@@ -91,7 +91,7 @@ color: rgb(255, 255, 255) !important;
         <div class="container">
           <div class="row">
             <div class="one-third column">
-            <img src="https://www.tryfoexnow.com/c/foex-site/2015/images/foex_logo_light.png" class="img-responsive"  width="80%" height="80%">
+            <img src="/static/images/backs.jpg" class="img-responsive"  width="80%" height="80%">
               <p class="ewf">We specialize in creating powerful <br>plugins that enhance Oracle APEX.</p>
               <p class="ewf" >Our low-code Enterprise Rapid <br>Application Development solution <br>enables anyone with basic PL/SQL knowledge to built large-scale web applications declaratively.</p>
             </div>
