@@ -119,8 +119,6 @@ aa {
 							<li class="popover-item"><a class="popover-link" href="post">Post
 									a Job</a></li>
 							<li class="popover-item"><a class="popover-link"
-								href="login">Login</a></li>
-							<li class="popover-item"><a class="popover-link"
 								href="createcountries">Admin</a></li>
 						</ul>
 					</div></li>
