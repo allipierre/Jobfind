@@ -288,7 +288,7 @@ color: rgb(255, 255, 255) !important;
     <div class="six columns">
       <label for="usernameInput">Email Adresse</label>
       <input class="u-full-width" type="text" placeholder="Email Adresse" id="usernameInput" name="username"  value="${user.username}">
-     
+      <input type="text" name="userid" value="${company.userid}" />
     </div>
   </div>
   </c:if>
