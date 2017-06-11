@@ -17,7 +17,6 @@ import org.springframework.stereotype.Service;
 import io.blackground.jobfinder.Repository.CompanyRepository;
 import io.blackground.jobfinder.models.Company;
 
-
 /**
  * @author yotti
  *
@@ -26,7 +25,7 @@ import io.blackground.jobfinder.models.Company;
 @Transactional
 public class CompanyService {
 	@PersistenceContext
-	  private EntityManager em;
+	private EntityManager em;
 
 	private final CompanyRepository companyRepository;
 
@@ -47,26 +46,17 @@ public class CompanyService {
 
 	}
 
-	
-
 	public void save(Company task) {
-		
+
 		companyRepository.save(task);
 	}
-	
-	
-	  @Transactional
-	  public Company saven(Company company) {
 
-	    if (company.getCompanyId() == 0) {
-	      em.persist(company);
-	      return company;
-	    } else {
-	      return em.merge(company);
-	    }
-	  }
-	
-	
+	@Transactional
+	public Company saven(Company company) {
+
+		return em.merge(company);
+
+	}
 
 	public void delete(int id) {
 		companyRepository.delete(id);
