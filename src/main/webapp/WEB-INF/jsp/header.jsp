@@ -1,7 +1,3 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -118,12 +114,8 @@ aa {
 					data-popover="#moreNavPopover">Employees</a>
 					<div id="moreNavPopover" class="popover">
 						<ul class="popover-list">
-						<c:forEach var="user" items="${users}">
-						<c:if test="${pageContext.request.userPrincipal.name == user.username}">
 							<li class="popover-item"><a class="popover-link"
-								href="createcompagny?id=${user.id}">Create profile</a></li>
-						 </c:if>
-						</c:forEach>
+								href="createcompagny?id=1">Create profile</a></li>
 							<li class="popover-item"><a class="popover-link" href="post">Post
 									a Job</a></li>
 							<li class="popover-item"><a class="popover-link"
