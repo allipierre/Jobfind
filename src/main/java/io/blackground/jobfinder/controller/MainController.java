@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import io.blackground.jobfinder.Repository.UserService;
 import io.blackground.jobfinder.models.Industry;
@@ -64,9 +65,10 @@ public class MainController {
 	}
 	
 	@GetMapping("/createcompagny")
-	public String createCompany(HttpServletRequest request) {
+	public String createCompany(HttpServletRequest request,@RequestParam int id) {
 		List<Industry> list=industryService.findAll();
 		request.setAttribute("countries", countriesservice.findAll());
+		request.setAttribute("company", companyservice.findCompany(id));
 		request.setAttribute("companySize", companySizesservice.findAll());
 		request.setAttribute("industry", list);
 		request.setAttribute("users", userService.findAll());

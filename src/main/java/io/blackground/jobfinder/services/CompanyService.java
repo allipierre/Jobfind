@@ -12,6 +12,7 @@ import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.repository.core.EntityInformation;
 import org.springframework.stereotype.Service;
 
 import io.blackground.jobfinder.Repository.CompanyRepository;
@@ -62,7 +63,7 @@ public class CompanyService {
 		companyRepository.delete(id);
 	}
 
-	public Company findJob(int id) {
+	public Company findCompany(int id) {
 		return companyRepository.findOne(id);
 	}
 
