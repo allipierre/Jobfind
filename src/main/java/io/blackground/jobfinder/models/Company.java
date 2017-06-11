@@ -63,7 +63,7 @@ public class Company {
 	 * @return the user
 	 */
 	@OneToOne(optional=false)
-    @JoinColumn(name = "userid") 
+    @JoinColumn(name = "userid",insertable=false,updatable=false) 
 	public User getUser() {
 		return user;
 	}
