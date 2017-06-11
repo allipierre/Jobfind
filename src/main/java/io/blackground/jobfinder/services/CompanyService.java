@@ -6,8 +6,11 @@ package io.blackground.jobfinder.services;
 import java.util.List;
 import java.util.ArrayList;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
@@ -22,6 +25,8 @@ import io.blackground.jobfinder.models.Company;
 @Service
 @Transactional
 public class CompanyService {
+	@PersistenceContext
+	  private EntityManager em;
 
 	private final CompanyRepository companyRepository;
 
@@ -45,8 +50,23 @@ public class CompanyService {
 	
 
 	public void save(Company task) {
+		
 		companyRepository.save(task);
 	}
+	
+	
+	  @Transactional
+	  public Company saven(Company company) {
+
+	    if (company.getCompanyId() == 0) {
+	      em.persist(company);
+	      return company;
+	    } else {
+	      return em.merge(company);
+	    }
+	  }
+	
+	
 
 	public void delete(int id) {
 		companyRepository.delete(id);
