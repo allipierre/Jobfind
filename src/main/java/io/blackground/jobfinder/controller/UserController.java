@@ -16,7 +16,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import io.blackground.jobfinder.Repository.UserService;
+import io.blackground.jobfinder.models.Company;
 import io.blackground.jobfinder.models.User;
+import io.blackground.jobfinder.services.CompanyService;
 import io.blackground.jobfinder.services.SecurityService;
 import io.blackground.jobfinder.services.UserValidator;
 
@@ -34,6 +36,9 @@ public class UserController {
 
     @Autowired
     private UserValidator userValidator;
+    
+    @Autowired
+	private CompanyService companyservice;
 
     @RequestMapping(value = "/registration", method = RequestMethod.GET)
     public String registration(Model model) {
@@ -43,7 +48,7 @@ public class UserController {
     }
 
     @RequestMapping(value = "/registration", method = RequestMethod.POST)
-    public String registration(@ModelAttribute("userForm") User userForm, BindingResult bindingResult, Model model) {
+    public String registration(@ModelAttribute("userForm") User userForm,@ModelAttribute Company company, BindingResult bindingResult, Model model) {
         userValidator.validate(userForm, bindingResult);
 
         if (bindingResult.hasErrors()) {
@@ -51,6 +56,7 @@ public class UserController {
         }
 
         userService.save(userForm);
+        companyservice.saven(company);
 
         securityService.autologin(userForm.getUsername(), userForm.getPasswordConfirm());
 
