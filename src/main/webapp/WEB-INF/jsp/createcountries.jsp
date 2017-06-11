@@ -278,6 +278,7 @@ color: rgb(255, 255, 255) !important;
     </div>
   </div>
    <input class="button-primary" type="submit" value="SAVE Country"> 
+   <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 </form> 
 </div>
 
@@ -293,6 +294,7 @@ color: rgb(255, 255, 255) !important;
     </div>
   </div>
    <input class="button-primary" type="submit" value="SAVE Country Size"> 
+   <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 </form> 
 </div>
 
