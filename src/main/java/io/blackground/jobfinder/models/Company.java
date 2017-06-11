@@ -38,6 +38,20 @@ public class Company {
 	private int industryid;
 	private long userid;
 	
+	/**
+	 * @return the userid
+	 */
+	public long getUserid() {
+		return userid;
+	}
+
+	/**
+	 * @param userid the userid to set
+	 */
+	public void setUserid(long userid) {
+		this.userid = userid;
+	}
+
 	private int numbere;
 
 	private Industry industry;
