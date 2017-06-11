@@ -36,19 +36,19 @@ public class Company {
 	private String city;
 	private int location;
 	private int industryid;
-	private long userid;
+	private int userid;
 	
 	/**
 	 * @return the userid
 	 */
-	public long getUserid() {
+	public int getUserid() {
 		return userid;
 	}
 
 	/**
 	 * @param userid the userid to set
 	 */
-	public void setUserid(long userid) {
+	public void setUserid(int userid) {
 		this.userid = userid;
 	}
 
