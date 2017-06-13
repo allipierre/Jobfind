@@ -126,8 +126,8 @@
              doesn't support database creation (see http://jira.xwiki.org/browse/XWIKI-8753) -->
 
     <property name="connection.url">jdbc:postgresql:jobfinder</property>
-    <property name="connection.username">postgres</property>
-    <property name="connection.password">me@blackground</property>
+    <property name="connection.username">myqraqihonlntq</property>
+    <property name="connection.password">2b2ceb7da7771eb6ad8ee9ae1b5ba24949225983285e4d5c24058c7249af840e</property>
     <property name="connection.driver_class">org.postgresql.Driver</property>
     <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
     <property name="jdbc.use_streams_for_binary">false</property>
