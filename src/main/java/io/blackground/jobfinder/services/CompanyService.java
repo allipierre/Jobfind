@@ -70,7 +70,7 @@ public class CompanyService {
 	
 	public Company findCompany(User user) {
 		Company company = null;
-		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+		Session session = null;
 		session.beginTransaction();
 		Criteria criteria = session.createCriteria(Company.class);
 		criteria.add(Restrictions.eq("user", user));
