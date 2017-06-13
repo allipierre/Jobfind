@@ -36,7 +36,7 @@ public class HibernateUtil {
     }
     
     @Bean
-    public static HibernateJpaSessionFactoryBean sessionFactory() {
+    public HibernateJpaSessionFactoryBean sessionFactory() {
         return new HibernateJpaSessionFactoryBean();
     }
 }
