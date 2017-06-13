@@ -55,14 +55,15 @@
     <property name="dbcp.ps.whenExhaustedAction">1</property>
     <property name="dbcp.ps.maxWait">120000</property>
     <property name="dbcp.ps.maxIdle">20</property>
-    
 
     <!-- Setting dbcp.ps.maxActive configuration tells DBCP whether to cache Prepared Statement or not.
+
          Note 1: When using HSQLDB for example, it's important to NOT cache prepared statements because HSQLDB
          Prepared Statements (PS) contain the schema on which they were initially created and thus when switching
          schema if the same PS is reused it'll execute on the wrong schema! Since HSQLDB does internally cache
          prepared statement there's no performance loss. see http://jira.xwiki.org/browse/XWIKI-1740.
          Thus we recommend not turning on this configuration for HSQLDB unless you know what you're doing :)
+
          Note 2: The same applies to PostGreSQL.
     -->
 
@@ -86,6 +87,7 @@
     <!--
     <property name="connection.datasource">java:jboss/datasources/ExampleDS</property>
     <property name="dialect"> org.hibernate.dialect.H2Dialect</property>
+
     <mapping resource="xwiki.hbm.xml"/>
     <mapping resource="feeds.hbm.xml"/>
     <mapping resource="activitystream.hbm.xml"/>
@@ -93,6 +95,7 @@
 
     <!-- MySQL configuration.
          Uncomment if you want to use MySQL and comment out other database configurations.
+
     <property name="connection.url">jdbc:mysql://localhost/xwiki</property>
     <property name="connection.username">xwiki</property>
     <property name="connection.password">xwiki</property>
@@ -107,6 +110,7 @@
 
     <!-- HSQLDB configuration.
          Uncomment if you want to use HSQLDB and comment out other database configurations.
+
     <property name="connection.url">jdbc:hsqldb:file:${environment.permanentDirectory}/database/xwiki_db;shutdown=true</property>
     <property name="connection.username">sa</property>
     <property name="connection.password"></property>
@@ -126,9 +130,9 @@
            - "xwiki.virtual_mode" can be set to either "schema" or "database". Note that currently the database mode
              doesn't support database creation (see http://jira.xwiki.org/browse/XWIKI-8753) -->
 
-    <property name="connection.url">jdbc:postgresql://foo:5432/bar</property>
-    <property name="connection.username">myqraqihonlntq</property>
-    <property name="connection.password">2b2ceb7da7771eb6ad8ee9ae1b5ba24949225983285e4d5c24058c7249af840e</property>
+    <property name="connection.url">jdbc:postgresql:jobfinder</property>
+    <property name="connection.username">postgres</property>
+    <property name="connection.password">me@blackground</property>
     <property name="connection.driver_class">org.postgresql.Driver</property>
     <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
     <property name="jdbc.use_streams_for_binary">false</property>
@@ -141,6 +145,7 @@
              "jdbc.batch_size". They are required to tell Oracle to allow CLOBs larger than 32K.
            - "jdbc.use_streams_for_binary" needs to be set to "false",
              see https://community.jboss.org/wiki/HibernateCoreMigrationGuide36
+
     <property name="connection.url">jdbc:oracle:thin:@localhost:1521:XE</property>
     <property name="connection.username">xwiki</property>
     <property name="connection.password">xwiki</property>
@@ -158,6 +163,7 @@
 
     <!-- Derby configuration.
          Uncomment if you want to use Derby and comment out other database configurations.
+
     <property name="connection.url">jdbc:derby:/some/path/xwikidb;create=true</property>
     <property name="connection.driver_class">org.apache.derby.jdbc.EmbeddedDriver</property>
     <property name="dialect">org.hibernate.dialect.DerbyDialect</property>
@@ -170,6 +176,7 @@
 
     <!-- H2 configuration.
          Uncomment if you want to use H2 and comment out other database configurations.
+
     <property name="connection.url">jdbc:h2:${environment.permanentDirectory}/database/xwiki</property>
     <property name="connection.username">sa</property>
     <property name="connection.password"></property>
