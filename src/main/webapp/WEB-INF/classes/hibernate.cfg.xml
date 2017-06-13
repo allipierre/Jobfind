@@ -133,6 +133,29 @@
     <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
     <property name="jdbc.use_streams_for_binary">false</property>
     <property name="xwiki.virtual_mode">schema</property>
+    
+    
+    
+    <properties>
+            <property name="hibernate.connection.url" value="jdbc:postgresql://ec2-107-21-126-162.compute-1.amazonaws.com:6232/dbname?username=username&amp;password=password&amp;ssl=true&amp;sslfactory=org.postgresql.ssl.NonValidatingFactory"/>
+            <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>
+            <property name="hibernate.connection.username" value="username"/>
+            <property name="hibernate.connection.password" value="password"/>
+            <property name="hibernate.archive.autodetection" value="class"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hbm2ddl.auto" value="update"/>
+
+            <!-- c3p0 connection pool settings -->
+            <property name="hibernate.connection.provider_class" value="org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider" />
+            <property name="hibernate.c3p0.min_size" value="1" />
+            <property name="hibernate.c3p0.max_size" value="5" />
+            <property name="hibernate.c3p0.acquire_increment" value="1" />
+            <property name="hibernate.c3p0.idle_test_period" value="3000" />
+            <property name="hibernate.c3p0.max_statements" value="50" />
+            <property name="hibernate.c3p0.timeout" value="1800" />
+
+        </properties>
 
     <!-- Oracle configuration.
          Uncomment if you want to use Oracle and comment out other database configurations.
