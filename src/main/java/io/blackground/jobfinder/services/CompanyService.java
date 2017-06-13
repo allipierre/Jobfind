@@ -9,7 +9,9 @@ import java.util.ArrayList;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
-
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.core.EntityInformation;
@@ -17,6 +19,8 @@ import org.springframework.stereotype.Service;
 
 import io.blackground.jobfinder.Repository.CompanyRepository;
 import io.blackground.jobfinder.models.Company;
+import io.blackground.jobfinder.models.User;
+import io.blackground.jobfinder.utils.HibernateUtil;
 
 /**
  * @author yotti
@@ -65,6 +69,18 @@ public class CompanyService {
 
 	public Company findCompany(int id) {
 		return companyRepository.findOne(id);
+	}
+	
+	public Company findCompany(User user) {
+		Company company = null;
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		Criteria criteria = session.createCriteria(Company.class);
+		criteria.add(Restrictions.eq("user", user));
+		company = (Company) criteria.uniqueResult();
+		session.getTransaction().commit();
+
+		return company;
 	}
 
 }
