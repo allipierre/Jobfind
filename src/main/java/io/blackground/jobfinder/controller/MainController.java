@@ -42,18 +42,13 @@ public class MainController {
 	@Autowired
 	private CompanyService companyservice;
 	
-	@Autowired
-	private CountriesService countriesservice;
 	
-	@Autowired
-	private CompanySizeService companySizesservice;
 	
 	@Autowired
 	private IndustryService industryService;
 	
 	
-	 @Autowired
-	    private UserServiceImpl userService;
+	 
 
 //	@GetMapping("/")
 //	public String hello() {
@@ -67,24 +62,7 @@ public class MainController {
 		return "allejob";
 	}
 	
-	@GetMapping("/createcompagny")
-	public String createCompany(HttpServletRequest request) {
-		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-		User user = userService.findByUsername(authentication.getName());
-        Company userCompany = companyservice.findCompany(user);
-        System.out.println("Company found is " + userCompany);
-        if (userCompany == null) {
-            userCompany = new Company();
-            userCompany.setUser(user);
-        }
-        userCompany.setIndustry(industryService.findById(userCompany.getIndustryid()));
-		List<Industry> list=industryService.findAll();
-		request.setAttribute("countries", countriesservice.findAll());
-		request.setAttribute("companySize", companySizesservice.findAll());
-		request.setAttribute("industry", list);
-		request.setAttribute("users", userService.findAll());
-		return "createcompagny";
-	}
+	
 	
 	@GetMapping("/createcountries")
 	public String createCountry(HttpServletRequest request) {
