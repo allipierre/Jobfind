@@ -27,6 +27,9 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-security')
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile('org.springframework.boot:spring-boot-starter-mail')
+	compile group: 'org.hibernate', name: 'hibernate-core', version: '5.2.10.Final'
+	compile group: 'org.hibernate', name: 'hibernate-c3p0', version: '5.2.10.Final'
+	compile group: 'org.hibernate', name: 'hibernate-entitymanager', version: '5.2.10.Final'
 	compile group: 'javax.servlet', name: 'jstl', version: '1.2'
 	compile group: 'org.apache.tomcat.embed', name: 'tomcat-embed-jasper', version: '9.0.0.M21'
 	compileOnly "org.projectlombok:lombok:1.16.16"
