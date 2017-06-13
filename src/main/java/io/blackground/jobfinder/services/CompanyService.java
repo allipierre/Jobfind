@@ -17,7 +17,6 @@ import org.springframework.stereotype.Service;
 import io.blackground.jobfinder.Repository.CompanyRepository;
 import io.blackground.jobfinder.models.Company;
 import io.blackground.jobfinder.models.User;
-import io.blackground.jobfinder.utils.HibernateUtil;
 
 /**
  * @author yotti
