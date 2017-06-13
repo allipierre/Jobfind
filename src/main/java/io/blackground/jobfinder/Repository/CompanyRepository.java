@@ -20,7 +20,7 @@ import io.blackground.jobfinder.models.Company;
  *
  */
 
-public interface CompanyRepository extends CrudRepository<Company, Integer> {
+public interface CompanyRepository extends CrudRepository<Company, Long> {
 
 	//@Query(nativeQuery = true)
 	//public List<Company> findByidIs();
