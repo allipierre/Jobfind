@@ -77,7 +77,7 @@ public class MainController {
             userCompany = new Company();
             userCompany.setUser(user);
         }
-		
+        userCompany.setIndustry(industryService.findById(userCompany.getIndustryid()));
 		List<Industry> list=industryService.findAll();
 		request.setAttribute("countries", countriesservice.findAll());
 		request.setAttribute("companySize", companySizesservice.findAll());

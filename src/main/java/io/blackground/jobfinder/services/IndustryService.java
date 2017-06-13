@@ -54,5 +54,9 @@ public class IndustryService {
 	public Industry findCountry(int id) {
 		return industryRepository.findOne(id);
 	}
+	
+	public Industry findById(int id) {
+		return industryRepository.findById(id);
+	}
 
 }
