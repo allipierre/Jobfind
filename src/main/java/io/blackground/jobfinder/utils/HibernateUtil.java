@@ -5,8 +5,6 @@ package io.blackground.jobfinder.utils;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-import org.springframework.context.annotation.Bean;
-import org.springframework.orm.jpa.vendor.HibernateJpaSessionFactoryBean;
 
 /**
  * @author yotti
@@ -33,10 +31,5 @@ public class HibernateUtil {
     public static void shutDown(){
         //closes caches and connections
         getSessionFactory().close();
-    }
-    
-    @Bean
-    public HibernateJpaSessionFactoryBean sessionFactory() {
-        return new HibernateJpaSessionFactoryBean();
     }
 }
