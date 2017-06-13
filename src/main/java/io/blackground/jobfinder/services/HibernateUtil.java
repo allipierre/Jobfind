@@ -1,7 +1,7 @@
 /**
  * 
  */
-package io.blackground.jobfinder.utils;
+package io.blackground.jobfinder.services;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
