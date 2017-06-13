@@ -55,7 +55,7 @@ public class CtreateCompanyController {
 		 Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 	        
 	        User user = userService.findByUsername(authentication.getName());
-	        Company oldCompany = companyservice.findCompany(user);
+	        Company oldCompany = companyservice.findCompany(user.getId());
 	        company.setUser(user);
 	        if (oldCompany != null) {
 	            company.setCompanyId(oldCompany.getCompanyId());
