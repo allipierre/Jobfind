@@ -12,9 +12,6 @@ import javax.transaction.Transactional;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.repository.core.EntityInformation;
 import org.springframework.stereotype.Service;
 
 import io.blackground.jobfinder.Repository.CompanyRepository;
