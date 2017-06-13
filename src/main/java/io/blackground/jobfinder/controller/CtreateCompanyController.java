@@ -73,7 +73,7 @@ public class CtreateCompanyController {
             return "403_forbidden";
         }
 		User user = userService.findByUsername(authentication.getName());
-        Company userCompany = companyservice.findCompany(user);
+        Company userCompany = companyservice.findCompany(user.getId());
         System.out.println("Company found is " + userCompany);
         if (userCompany == null) {
             userCompany = new Company();

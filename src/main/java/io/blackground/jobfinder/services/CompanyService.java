@@ -60,17 +60,17 @@ public class CompanyService {
 
 	}
 
-	public void delete(int id) {
+	public void delete(Long id) {
 		companyRepository.delete(id);
 	}
 
-	public Company findCompany(int id) {
+	public Company findCompany(Long id) {
 		return companyRepository.findOne(id);
 	}
 	
 	public Company findCompany(User user) {
 		Company company = null;
-		Session session = null;
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 		session.beginTransaction();
 		Criteria criteria = session.createCriteria(Company.class);
 		criteria.add(Restrictions.eq("user", user));
