@@ -10,8 +10,14 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
+import io.blackground.jobfinder.models.User;
+import io.blackground.jobfinder.utils.HibernateUtil;
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.provider.HibernateUtils;
 import org.springframework.stereotype.Service;
 
 import io.blackground.jobfinder.Repository.CompanyRepository;
@@ -29,9 +35,6 @@ public class CompanyService {
 
 	private final CompanyRepository companyRepository;
 
-	/**
-	 * @param taskRepository
-	 */
 	public CompanyService(CompanyRepository companyRepository) {
 		super();
 		this.companyRepository = companyRepository;
@@ -46,24 +49,24 @@ public class CompanyService {
 
 	}
 
-	public void save(Company task) {
-
-		companyRepository.save(task);
-	}
-
-	@Transactional
-	public Company saven(Company company) {
-
-		return em.merge(company);
-
+	public void save(Company company) {
+		companyRepository.save(company);
 	}
 
 	public void delete(int id) {
 		companyRepository.delete(id);
 	}
 
-	public Company findJob(int id) {
-		return companyRepository.findOne(id);
+	public Company findCompany(User user) {
+		Company company = null;
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		Criteria criteria = session.createCriteria(Company.class);
+		criteria.add(Restrictions.eq("user", user));
+		company = (Company) criteria.uniqueResult();
+		session.getTransaction().commit();
+
+		return company;
 	}
 
 }

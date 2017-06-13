@@ -237,13 +237,12 @@ public class Job {
 
 	/**
 	 * @return the company
-	 */
 
 	@ManyToOne(optional = false)
-	@JoinColumn(name = "companyid", referencedColumnName = "companyId", insertable = false, updatable = false)
+	@JoinColumn(name = "companyid", referencedColumnName = "id", insertable = false, updatable = false)
 	public Company getCompany() {
 		return company;
-	}
+	}*/
 
 	/**
 	 * @param company

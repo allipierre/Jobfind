@@ -63,16 +63,6 @@ public class MainController {
 		return "allejob";
 	}
 	
-	@GetMapping("/createcompagny")
-	public String createCompany(HttpServletRequest request) {
-		List<Industry> list=industryService.findAll();
-		request.setAttribute("countries", countriesservice.findAll());
-		request.setAttribute("companySize", companySizesservice.findAll());
-		request.setAttribute("industry", list);
-		request.setAttribute("users", userService.findAll());
-		return "createcompagny";
-	}
-	
 	@GetMapping("/createcountries")
 	public String createCountry(HttpServletRequest request) {
 		//request.setAttribute("countries", companyservice.findAll());
