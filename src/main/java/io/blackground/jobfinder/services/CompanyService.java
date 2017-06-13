@@ -60,11 +60,11 @@ public class CompanyService {
 
 	}
 
-	public void delete(Long id) {
+	public void delete(int id) {
 		companyRepository.delete(id);
 	}
 
-	public Company findCompany(Long id) {
+	public Company findCompany(int id) {
 		return companyRepository.findOne(id);
 	}
 	
