@@ -21,9 +21,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
-
-
-
 //@NamedNativeQuery(name = "Company.findByidIs", query = "SELECT companyId,companyName,website,about,city,location,industry_id,numbere FROM Company t", resultClass = Company.class)
 @Entity
 public class Company {
@@ -37,16 +34,22 @@ public class Company {
 	private int location;
 	private int industryid;
 	private int userid;
-	
+
 	/**
 	 * @return the userid
 	 */
+
+	public Company() {
+
+	}
+
 	public int getUserid() {
 		return userid;
 	}
 
 	/**
-	 * @param userid the userid to set
+	 * @param userid
+	 *            the userid to set
 	 */
 	public void setUserid(int userid) {
 		this.userid = userid;
@@ -57,19 +60,20 @@ public class Company {
 	private Industry industry;
 	private Countries countries;
 	private CompanySize companysize;
-	private User user; 
-	
+	private User user;
+
 	/**
 	 * @return the user
 	 */
-	@OneToOne(optional=false)
-    @JoinColumn(name = "userid",insertable=false,updatable=false) 
+	@OneToOne(optional = false)
+	@JoinColumn(name = "userid", insertable = false, updatable = false)
 	public User getUser() {
 		return user;
 	}
 
 	/**
-	 * @param user the user to set
+	 * @param user
+	 *            the user to set
 	 */
 	public void setUser(User user) {
 		this.user = user;
@@ -86,7 +90,8 @@ public class Company {
 	}
 
 	/**
-	 * @param job the job to set
+	 * @param job
+	 *            the job to set
 	 */
 	public void setJob(Set<Job> job) {
 		this.job = job;
@@ -96,13 +101,14 @@ public class Company {
 	 * @return the companysize
 	 */
 	@ManyToOne(optional = false)
-	@JoinColumn(name = "numbere", referencedColumnName = "id",insertable=false,updatable=false)
+	@JoinColumn(name = "numbere", referencedColumnName = "id", insertable = false, updatable = false)
 	public CompanySize getCompanysize() {
 		return companysize;
 	}
 
 	/**
-	 * @param companysize the companysize to set
+	 * @param companysize
+	 *            the companysize to set
 	 */
 	public void setCompanysize(CompanySize companysize) {
 		this.companysize = companysize;
@@ -111,15 +117,16 @@ public class Company {
 	/**
 	 * @return the countries
 	 */
-	
+
 	@ManyToOne(optional = false)
-	@JoinColumn(name = "location", referencedColumnName = "id",insertable=false,updatable=false)
+	@JoinColumn(name = "location", referencedColumnName = "id", insertable = false, updatable = false)
 	public Countries getCountries() {
 		return countries;
 	}
 
 	/**
-	 * @param countries the countries to set
+	 * @param countries
+	 *            the countries to set
 	 */
 	public void setCountries(Countries countries) {
 		this.countries = countries;
@@ -133,13 +140,12 @@ public class Company {
 	}
 
 	/**
-	 * @param industryid the industryid to set
+	 * @param industryid
+	 *            the industryid to set
 	 */
 	public void setIndustryid(int industryid) {
 		this.industryid = industryid;
 	}
-
-	
 
 	/**
 	 * @return the id
@@ -218,8 +224,6 @@ public class Company {
 		this.city = city;
 	}
 
-	
-
 	/**
 	 * @param location
 	 *            the location to set
@@ -259,7 +263,7 @@ public class Company {
 	 * @return the industry
 	 */
 	@ManyToOne(optional = false)
-	@JoinColumn(name = "industryid", referencedColumnName = "id",insertable=false,updatable=false)
+	@JoinColumn(name = "industryid", referencedColumnName = "id", insertable = false, updatable = false)
 	public Industry getIndustry() {
 		return industry;
 	}
