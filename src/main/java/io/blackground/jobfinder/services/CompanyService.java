@@ -11,7 +11,9 @@ import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import io.blackground.jobfinder.Repository.CompanyRepository;
@@ -28,14 +30,18 @@ import io.blackground.jobfinder.utils.HibernateUtil;
 public class CompanyService {
 	@PersistenceContext
 	private EntityManager em;
+	
+	 private final SessionFactory sf;
 
 	private final CompanyRepository companyRepository;
 
 	/**
 	 * @param taskRepository
 	 */
-	public CompanyService(CompanyRepository companyRepository) {
+	@Autowired
+	public CompanyService(CompanyRepository companyRepository,SessionFactory sf) {
 		super();
+		 this.sf=sf;
 		this.companyRepository = companyRepository;
 	}
 
@@ -69,8 +75,8 @@ public class CompanyService {
 	}
 	
 	public Company findCompany(User user) {
-		Company company = null;
-		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+		Company company = new Company();
+		Session session = sf.getCurrentSession();
 		session.beginTransaction();
 		Criteria criteria = session.createCriteria(Company.class);
 		criteria.add(Restrictions.eq("user", user));
