@@ -339,7 +339,7 @@ color: rgb(255, 255, 255) !important;
   <textarea class="u-full-width" placeholder="About Us" id="about"  name="about" value="${company.about}"></textarea>
   <div class="row">
   <div class="one columns">
-      <input class="u-full-width" type="text" placeholder="company Industry" id="companyIndustry" name="industryid"  value="${company.industryid}">
+      <input class="u-full-width" type="text" placeholder="company Industry" id="companyIndustry" name="industryid"  value="${company.id}">
     </div>
     
     <div class="one columns">
