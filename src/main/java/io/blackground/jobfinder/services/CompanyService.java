@@ -59,12 +59,7 @@ public class CompanyService {
 		companyRepository.save(task);
 	}
 
-	@Transactional
-	public Company saven(Company company) {
-
-		return em.merge(company);
-
-	}
+	
 
 	public void delete(int id) {
 		companyRepository.delete(id);
