@@ -65,7 +65,7 @@ public class CtreateCompanyController {
 	    }
 	
 	
-	@GetMapping("/createcompagny"
+	@GetMapping("/createcompagny")
 	public String createCompany(HttpServletRequest request) {
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 		
