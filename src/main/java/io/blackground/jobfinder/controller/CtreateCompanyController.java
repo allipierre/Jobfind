@@ -58,7 +58,7 @@ public class CtreateCompanyController {
 	        Company oldCompany = companyservice.findCompany(user);
 	        company.setUser(user);
 	        if (oldCompany != null) {
-	            company.setCompanyId(oldCompany.getCompanyId());
+	            company.setId(oldCompany.getId());
 	        }
 	        companyservice.save(company);
 	        return "createcompany";
@@ -77,7 +77,7 @@ public class CtreateCompanyController {
             userCompany = new Company();
             userCompany.setUser(user);
         }
-        userCompany.setIndustry(industryService.findById(userCompany.getIndustryid()));
+        userCompany.setIndustry(industryService.findById((int) userCompany.getId()));
 		request.setAttribute("countries", countriesservice.findAll());
 		request.setAttribute("companySize", companySizesservice.findAll());
 		request.setAttribute("company", userCompany);
