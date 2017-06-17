@@ -11,13 +11,11 @@ import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
 import io.blackground.jobfinder.models.User;
-import io.blackground.jobfinder.utils.HibernateUtil;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.jpa.provider.HibernateUtils;
 import org.springframework.stereotype.Service;
 
 import io.blackground.jobfinder.Repository.CompanyRepository;
@@ -30,14 +28,18 @@ import io.blackground.jobfinder.models.Company;
 @Service
 @Transactional
 public class CompanyService {
+
+	private final SessionFactory sessionFactory;
 	@PersistenceContext
 	private EntityManager em;
 
 	private final CompanyRepository companyRepository;
 
-	public CompanyService(CompanyRepository companyRepository) {
+	@Autowired
+	public CompanyService(CompanyRepository companyRepository, SessionFactory sessionFactory) {
 		super();
 		this.companyRepository = companyRepository;
+		this.sessionFactory = sessionFactory;
 	}
 
 	public List<Company> findAll() {
@@ -59,7 +61,7 @@ public class CompanyService {
 
 	public Company findCompany(User user) {
 		Company company = null;
-		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+		Session session = sessionFactory.getCurrentSession();
 		session.beginTransaction();
 		Criteria criteria = session.createCriteria(Company.class);
 		criteria.add(Restrictions.eq("user", user));
