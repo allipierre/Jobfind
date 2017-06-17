@@ -48,7 +48,7 @@ public class CtreateCompanyController {
 	@Autowired
 	private IndustryService industryService;
 
-	@PostMapping("/save-company")
+	@PostMapping("/company")
 	public String saveTask(@ModelAttribute Company company, BindingResult bindingResult, HttpServletRequest request) {
 
 
