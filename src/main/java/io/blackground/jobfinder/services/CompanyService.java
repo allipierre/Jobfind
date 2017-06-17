@@ -41,8 +41,8 @@ public class CompanyService {
 	@Autowired
 	public CompanyService(CompanyRepository companyRepository,SessionFactory sf) {
 		super();
-		 this.sf=sf;
 		this.companyRepository = companyRepository;
+		this.sf=sf;
 	}
 
 	public List<Company> findAll() {
@@ -75,7 +75,7 @@ public class CompanyService {
 	}
 	
 	public Company findCompany(User user) {
-		Company company = new Company();
+		Company company = null;
 		Session session = sf.getCurrentSession();
 		session.beginTransaction();
 		Criteria criteria = session.createCriteria(Company.class);
