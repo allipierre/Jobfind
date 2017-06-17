@@ -74,7 +74,7 @@ public class CtreateCompanyController {
         Company userCompany = companyservice.findCompany(user);
         System.out.println("Company found is " + userCompany);
         if (userCompany == null) {
-            userCompany = new Company(;
+            userCompany = new Company();
             userCompany.setUser(user);
         }
         userCompany.setIndustry(industryService.findById((int) userCompany.getId()));
