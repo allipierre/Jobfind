@@ -31,18 +31,19 @@ import io.blackground.jobfinder.services.UserServiceImpl;
  */
 @Controller
 public class CtreateCompanyController {
-
+	
+	
 	@Autowired
 	private CountriesService countriesservice;
-
+	
 	@Autowired
 	private CompanySizeService companySizesservice;
 
 	@Autowired
 	private CompanyService companyservice;
-
+	
 	@Autowired
-	private UserServiceImpl userService;
+    private UserServiceImpl userService;
 
 	@Autowired
 	private IndustryService industryService;
@@ -50,36 +51,37 @@ public class CtreateCompanyController {
 	@PostMapping("/save-company")
 	public String saveTask(@ModelAttribute Company company, BindingResult bindingResult, HttpServletRequest request) {
 
-		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 
-		User user = userService.findByUsername(authentication.getName());
-		Company oldCompany = companyservice.findCompany(user);
-		company.setUser(user);
-		if (oldCompany != null) {
-			company.setCompanyId(oldCompany.getCompanyId());
-		}
-		companyservice.save(company);
-		return "createcompany";
-	}
-
+		 Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+	        
+	        User user = userService.findByUsername(authentication.getName());
+	        Company oldCompany = companyservice.findCompany(user);
+	        company.setUser(user);
+	        if (oldCompany != null) {
+	            company.setCompanyId(oldCompany.getCompanyId());
+	        }
+	        companyservice.save(company);
+	        return "createcompany";
+	    }
+	
+	
 	@GetMapping("/createcompagny")
 	public String createCompany(HttpServletRequest request) {
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		
 
 		User user = userService.findByUsername(authentication.getName());
-		Company userCompany = companyservice.findCompany(user);
-		System.out.println("Company found is " + userCompany);
-		if (userCompany == null) {
-			userCompany = new Company();
-			userCompany.setUser(user);
-		}
-		userCompany.setIndustry(industryService.findById(userCompany.getIndustryid()));
+        Company userCompany = companyservice.findCompany(user);
+        System.out.println("Company found is " + userCompany);
+        if (userCompany == null) {
+            userCompany = new Company();
+            userCompany.setUser(user);
+        }
+        userCompany.setIndustry(industryService.findById(userCompany.getIndustryid()));
 		request.setAttribute("countries", countriesservice.findAll());
 		request.setAttribute("companySize", companySizesservice.findAll());
 		request.setAttribute("company", userCompany);
 		request.setAttribute("industry", industryService.findAll());
-
+		 
 		return "createcompagny";
-	}
-
-}
+	}}
