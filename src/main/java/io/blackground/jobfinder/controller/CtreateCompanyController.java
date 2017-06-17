@@ -70,7 +70,7 @@ public class CtreateCompanyController {
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 		
 
-		User user = userServie.findByUsername(authentication.getName());
+		User user = userService.findByUsername(authentication.getName());
         Company userCompany = companyservice.findCompany(user);
         System.out.println("Company found is " + userCompany);
         if (userCompany == null) {
