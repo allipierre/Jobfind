@@ -60,6 +60,7 @@ public class CompanyController {
             userCompany.setUser(user);
         }
         userCompany.setIndustry(industryService.findById(userCompany.getIndustryId()));
+        System.out.println("Company country is " + userCompany.getCountries());
         request.setAttribute("countries", countriesService.findAll());
         request.setAttribute("companySize", companySizeService.findAll());
         request.setAttribute("company", userCompany);

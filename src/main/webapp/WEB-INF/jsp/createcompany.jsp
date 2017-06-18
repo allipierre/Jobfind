@@ -274,15 +274,23 @@
         <div class="row">
             <div class="six columns">
                 <label for="companyNameInput">Company Name</label>
-                <input class="u-full-width" type="text" placeholder="Company Name" id="companyNameInput" name="companyName"
+                <input class="u-full-width" type="text" placeholder="Company Name" id="companyNameInput"
+                       name="companyName"
                        value="${company.companyName}">
             </div>
             <div class="six columns">
                 <label for="countryInput">Country</label>
-                <select class="u-full-width" id="countryInput">
+                <select class="u-full-width" id="countryInput" name="countries">
                     <option value="" disabled="disabled" selected="selected">Select the Country</option>
                     <c:forEach var="country" items="${countries}">
-                        <option id="countryID" value="${country.id}">${country.name}</option>
+                        <c:choose>
+                            <c:when test="${country.id == company.countries.id}">
+                                <option id="countryID" value="${country}" selected="selected">${country.name}</option>
+                            </c:when>
+                            <c:when test="${country.id != company.countries.id}">
+                                <option id="countryID" value="${country}">${country.name}</option>
+                            </c:when>
+                        </c:choose>
                     </c:forEach>
                 </select>
             </div>
@@ -296,12 +304,19 @@
             </div>
             <div class="six columns">
                 <label for="sizeInput">Size</label>
-                <select class="u-full-width" id="sizeInput">
+                <select class="u-full-width" id="sizeInput" name="companySize">
                     <option value="" disabled="disabled" selected="selected">Select the Company Size (No. of
                         employees)
                     </option>
                     <c:forEach var="companySize" items="${companySize}">
-                        <option value="${companySize.id}">${companySize.value}</option>
+                        <c:choose>
+                            <c:when test="${company.companySize == companySize}">
+                                <option value="${companySize}" selected="selected">${companySize.value}</option>
+                            </c:when>
+                            <c:when test="${company.companySize == companySize}">
+                                <option value="${companySize}">${companySize.value}</option>
+                            </c:when>
+                        </c:choose>
                     </c:forEach>
                 </select>
             </div>
@@ -316,21 +331,16 @@
             </div>
             <div class="six columns">
                 <label for="countryInput">Industry</label>
-                <select class="u-full-width" id="industryInput">
-                    <c:choose>
-                        <c:when test="${company.industry} != ${null}">
-                            <option value="${company.industry.id}" selected="selected">${company.industry.industryName}</option>
-                        </c:when>
-                        <c:when test="${company.industry} == ${null}">
-                            <option disabled="disabled" selected="selected">Select the Company Industry</option>
-                        </c:when>
-                    </c:choose>
+                <select class="u-full-width" id="industryInput" name="industryId">
+                    <option disabled="disabled" selected="selected">Select the Company Industry</option>
                     <c:forEach var="industry" items="${industries}">
                         <c:choose>
-                            <c:when test="${industry.id} == ${company.industry.id}">
+                            <c:when test="${industry.id == company.industry.id}">
+                                <option value="${company.industry.id}"
+                                        selected="selected">${industry.industryName}</option>
                                 <!-- skip -->
                             </c:when>
-                            <c:when test="${industry.id} != ${company.industry.id}">
+                            <c:when test="${industry.id != company.industry.id}">
                                 <option value="${industry.id}">${industry.industryName}</option>
                             </c:when>
                         </c:choose>
