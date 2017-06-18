@@ -60,6 +60,7 @@ public class CompanyController {
             userCompany.setUser(user);
         }
         userCompany.setIndustry(industryService.findById(userCompany.getIndustryId()));
+        userCompany.setCountries(countriesService.findCountry(userCompany.getCountryId()));
         System.out.println("Company country is " + userCompany.getCountries());
         request.setAttribute("countries", countriesService.findAll());
         request.setAttribute("companySize", companySizeService.findAll());
@@ -82,6 +83,12 @@ public class CompanyController {
             company.setId(oldCompany.getId());
         }
         companyservice.save(company);
+        company.setIndustry(industryService.findById(company.getIndustryId()));
+        company.setCountries(countriesService.findCountry(company.getCountryId()));
+        request.setAttribute("countries", countriesService.findAll());
+        request.setAttribute("companySize", companySizeService.findAll());
+        request.setAttribute("company", company);
+        request.setAttribute("industries", industryService.findAll());
         return "createcompany";
     }
 

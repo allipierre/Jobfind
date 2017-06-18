@@ -26,13 +26,12 @@ public class Company {
 	private String city;
 	private int location;
 	@Column(name = "industry_id")
-	private int industryId;
+	private long industryId;
+	private long countryId;
 	private int numbere;
 
 	private transient Industry industry;
-
-	@ManyToOne
-	private Countries countries;
+	private transient Countries countries;
 
 	@ManyToOne
 	@JoinColumn(name = "company_size")

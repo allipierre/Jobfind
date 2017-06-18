@@ -280,15 +280,15 @@
             </div>
             <div class="six columns">
                 <label for="countryInput">Country</label>
-                <select class="u-full-width" id="countryInput" name="countries">
+                <select class="u-full-width" id="countryInput" name="countryId">
                     <option value="" disabled="disabled" selected="selected">Select the Country</option>
                     <c:forEach var="country" items="${countries}">
                         <c:choose>
-                            <c:when test="${country.id == company.countries.id}">
-                                <option id="countryID" value="${country}" selected="selected">${country.name}</option>
+                            <c:when test="${country.id == company.countryId}">
+                                <option id="countryID" value="${country.id}" selected="selected">${country.name}</option>
                             </c:when>
-                            <c:when test="${country.id != company.countries.id}">
-                                <option id="countryID" value="${country}">${country.name}</option>
+                            <c:when test="${country.id != company.countryId}">
+                                <option id="countryID" value="${country.id}">${country.name}</option>
                             </c:when>
                         </c:choose>
                     </c:forEach>
@@ -313,7 +313,7 @@
                             <c:when test="${company.companySize == companySize}">
                                 <option value="${companySize}" selected="selected">${companySize.value}</option>
                             </c:when>
-                            <c:when test="${company.companySize == companySize}">
+                            <c:when test="${company.companySize != companySize}">
                                 <option value="${companySize}">${companySize.value}</option>
                             </c:when>
                         </c:choose>
@@ -330,7 +330,7 @@
                        value="${company.website}">
             </div>
             <div class="six columns">
-                <label for="countryInput">Industry</label>
+                <label for="industryInput">Industry</label>
                 <select class="u-full-width" id="industryInput" name="industryId">
                     <option disabled="disabled" selected="selected">Select the Company Industry</option>
                     <c:forEach var="industry" items="${industries}">
